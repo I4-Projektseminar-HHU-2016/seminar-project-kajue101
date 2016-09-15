@@ -1,0 +1,152 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1031\deflangfe1031{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\listtable 
+{\list\listhybrid
+{\listlevel\levelnfc23\leveljc0\levelstartat4{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}
+{\listlevel\levelnfc23\leveljc0\levelstartat1{\leveltext\'01\'B7;}{\levelnumbers;}\f1\jclisttab\tx0}\listid1 }}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+{\*\generator Riched20 10.0.10586}{\*\mmathPr\mnaryLim0\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\sa200\sl276\slmult1\b\f0\fs32\lang7 Projektseminar \endash  erste Projektidee\par
+\b0\fs28 Karoline J\'fcttner\par
+\par
+\ul\fs24 1) Welche Themen im Bereich der Informationswissenschaft und Sprachtechnologie interessieren mich?\par
+\ulnone Informetrie, Datenverarbeitung und -visualisierung, Social Media, IR, Gamification, \'85\par
+\ul 2) Welche Programmiersprachen und Tools liegen mir bzw. welche w\'fcrde ich gerne ausprobieren?\par
+\ulnone Python in Verbindung mit einem Visualisierungstool\par
+\ul 3) Wie k\'f6nnte ich mich in Form eines Projektes mit dem gew\'e4hlten Thema auseinandersetzen?\par
+\ulnone Erste Idee: Ich habe einen Datensatz zur Google Play App von 2015 gefunden, mit ziemlich detaillierten Informationen zu Installationen, Abst\'fcrzen und Bewertungen und das bezogen auf u.a. L\'e4nder, Sprachen, App-Version und Ger\'e4te. Au\'dferdem gibt es einen zweiten Datensatz von 2016, mit dem man durch einen Vergleich die Ver\'e4nderungen untersuchen k\'f6nnte. Das ganze w\'fcrde ich dann mit Python einlesen, weiterverarbeiten und mithilfe von Visualisierungstools darstellen und eine Datei anlegen, in der die Ergebnisse und das Vorgehen vorgestellt werden.\par
+\ul 4) Ist dies in der Bearbeitungszeit (ca. 4-8 Wochen) realisierbar? \par
+\ulnone Den kompletten Datensatz abzuarbeiten w\'fcrde in der Zeit vermutlich nicht klappen, ich w\'fcrde mich dann auf ein paar Aspekte davon beschr\'e4nken und diese lieber ausf\'fchrlich untersuchen und vergleichen.\par
+\par
+\b\fs28 Detaillierter Projektplan\par
+\ul\b0\fs24 Die Idee:\par
+\ulnone Es sollen f\'fcnf verschiedene CSV-Dateien, jeweils f\'fcr die Jahre 2015 und 2016, eingelesen und verarbeitet werden, die sich mit der Google Play App besch\'e4ftigen. Dort werden Installationen, L\'e4nder und Sprachen, Abst\'fcrze, Ger\'e4te und App-Versionen sowie Bewertungen und L\'e4nder miteinander in Bezug gesetzt. Mithilfe von einigen Listen, die mit Funktionen bearbeitet werden, sollen neue Erkenntnisse aus diesen Datens\'e4tzen gewonnen werden. Diese sollen dann kurz erkl\'e4rt und mit Diagrammen veranschaulicht werden.\par
+\ul Update:\par
+\ulnone Ich habe einen Datensatz gefunden, mit dem Titel "Google Play statistics 201501". Zun\'e4chst dachte ich, es handle sich um die Google Play App selbst, allerdings sind die Zahlen daf\'fcr zu niedrig. Beispielsweise ist der h\'f6chste Eintrag f\'fcr Deutschland in der Spalte "total user installs" nur 115835. Daher interpretiere ich den Datensatz so, dass es sich um irgendeine App aus dem Google Play Store handelt, deren Name nicht ver\'f6ffentlich wird. Au\'dferdem \'fcberschneidet sich der Datensatz von 2016 nur in zwei von mir untersuchten Aspekten, n\'e4mlich der Zusammenhang zwischen Installationen und L\'e4ndern und Installationen und Sprachen. Weil dadurch einige geplante Vergleiche wegfallen, m\'f6chte ich zus\'e4tzlich anhand von einem der Installationsdatens\'e4tze weitere Informationen berechnen, wie beispielsweise "Wie hoch ist der Anteil der Nutzer, der die App beh\'e4lt?", "Wie hoch ist die Deinstallationsquote?" oder "Wie hoch ist die Differenz zwischen t\'e4glichen Installationen und Deinstallationen?". Das kann dann auch zwischen 2015 und 2016 verglichen werden. Au\'dferdem, falls die Auswertung Visualisierungen enthalten sollte, die nicht nur aus einfachen Bildern bestehen (beispielsweise wenn mit d3 gearbeitet wird), muss das Auswertungsdokument diese Dateien auch darstellen k\'f6nnen. Die Auswertung w\'fcrde ich dann z.b. mit Sphinx machen und die Diagramme dort einbinden.\ul\par
+\ulnone\par
+\ul Was genau soll untersucht werden?\ulnone\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\nowidctlpar\fi-360\li720\sa200\sl276\slmult1 In welchen L\'e4ndern wird die App am h\'e4ufigsten installiert, in welchen am seltensten?\b\fs28\par
+{\listtext\f0 4\tab}\b0\fs24 In welchen Sprachen wird die App am h\'e4ufigsten installiert, in welchen am seltensten?\b\fs28\par
+{\listtext\f0 5\tab}\b0\fs24 Welche App-Versionen verursachen die meisten Abst\'fcrze, welche die wenigsten?\b\fs28\par
+{\listtext\f0 6\tab}\b0\fs24 Auf welchen Ger\'e4ten st\'fcrzt die App am h\'e4ufigsten ab, auf welchen am seltensten?\b\fs28\par
+{\listtext\f0 7\tab}\b0\fs24 Bewertungen bezogen auf L\'e4nder\b\fs28\par
+{\listtext\f0 8\tab}\b0\fs24 Alles (soweit m\'f6glich) jeweils f\'fcr 2015 und 2016 und dann vergleichen (was hat sich ver\'e4ndert?), zus\'e4tzlich:\b\fs28\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\ilvl1\nowidctlpar\fi-360\li1440\sa200\sl276\slmult1\b0\fs24 Summe der Installationen pro Jahr vergleichen\b\fs28\par
+{\listtext\f0 1\tab}\b0\fs24 Durchschnittsbewertung von 2015\b\fs28\par
+{\listtext\f0 2\tab}\b0\fs24 Summe der Abst\'fcrze von 2015\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\nowidctlpar\fi-360\li720\sa200\sl276\slmult1 Zus\'e4tzlich:\b\fs28\par
+
+\pard 
+{\listtext\f0\u10625?\tab}\ls1\ilvl1\nowidctlpar\fi-360\li1440\sa200\sl276\slmult1\b0\fs24 Wie viel Prozent der Nutzer, die die App installiert haben, behalten sie auch?\par
+{\listtext\f0 1\tab}Wie hoch ist die Deinstallationsquote?\par
+{\listtext\f0 2\tab}Wie hoch ist die Differenz zwischen Installationen und Deinstallationen?\par
+{\listtext\f0 3\tab}Beides f\'fcr 2015 und 2016 berechnen und vergleichen\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Erste Schritte: \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Die CSV-Dateien einlesen\ul\par
+{\pntext\f1\'B7\tab}\ulnone F\'fcr jede Datei eine Liste erstellen, in der alle Reihen abgespeichert werden, um alle Daten zu erfassen\ul\par
+{\pntext\f1\'B7\tab}\ulnone F\'fcr alle Spalten, mit denen gearbeitet werden soll, eine extra Liste erstellen\ul\par
+{\pntext\f1\'B7\tab}\ulnone Falls n\'f6tig weitere Listen definieren und f\'fcr alle das erste Element (die erste Reihe) l\'f6schen, das sind die Spalten\'fcberschriften\ul\par
+{\pntext\f1\'B7\tab}\ulnone Als Strings eingelesene Zahlen in Integers umwandeln, damit mit ihnen gerechnet werden kann\ul\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1 In welchen L\'e4ndern wird die App am h\'e4ufigsten installiert, in welchen am seltensten?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Liste erstellen, die nur die Spalte total_installs enth\'e4lt\par
+{\pntext\f1\'B7\tab}Liste erstellen, die die L\'e4nderabk\'fcrzungen enth\'e4lt\par
+{\pntext\f1\'B7\tab}Funktion schreiben, die diese beiden Listen einliest, die f\'fcnf h\'f6chsten Werte der Installation heraussucht und direkt das Land mit abspeichert, damit es trotz neuer Sortierung dem Wert zugeordnet werden kann und eine neue Liste mit dieser Zuordnung ausgibt\par
+{\pntext\f1\'B7\tab}Das gleiche noch einmal, nur dass statt des h\'f6chsten Wertes der niedrigste herausgesucht wird (hier eventuell gr\'f6\'dferes Spektrum betrachten, falls viele L\'e4nder mit 0 Installationen dabei sind)\par
+{\pntext\f1\'B7\tab}Zur Veranschaulichung wird ein Diagramm erstellt, das die L\'e4nder je nach Installationsh\'e4ufigkeit farbig darstellt. Dazu wird die Liste ben\'f6tigt, die alle Installationen enth\'e4lt (falls n\'f6tig absteigend sortiert) und f\'fcr das Diagramm eingelesen wird. Unsortiert sind die L\'e4nder leicht zuzuordnen, andernfalls wird die Funktion von oben (abgewandelt) genutzt. Wenn es funktioniert, w\'fcrde ich die Visualisierung gerne mit einem L\'e4nderdiagramm von d3 machen.\par
+{\pntext\f1\'B7\tab}Jeweils f\'fcr 2015 und 2016\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul In welchen Sprachen wird die App am h\'e4ufigsten installiert, in welchen am seltensten?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone\'c4hnliches Vorgehen wie bei vorheriger Frage, nur dass statt den L\'e4nderabk\'fcrzungen die Sprachen den Werten zugeordnet werden\par
+{\pntext\f1\'B7\tab}Hier wird ein Histogramm f\'fcr die 5 Sprachen in denen die App am h\'e4ufigsten installiert wird erstellt und eines f\'fcr die 5(?) in denen es am seltensten installiert wird\par
+{\pntext\f1\'B7\tab}Jeweils f\'fcr 2015 und 2016\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Welche App-Versionen verursachen die meisten Abst\'fcrze, welche die wenigsten?\b\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone\b0 Hier sollen die App-Versionen aufsteigend sortiert werden und mithilfe der bereits erkl\'e4rten Funktion die Abst\'fcrze zugeordnet werden\par
+{\pntext\f1\'B7\tab}Alle Werte k\'f6nnen dann in einem Histogramm mit Verlaufskurve (seaborn) dargestellt werden, um zu zeigen, wie sich die Versionen auf die Abst\'fcrze auswirken. Wie sieht die Kurve aus? St\'fcrzen neuere Versionen vielleicht \'f6fter oder seltener ab als \'e4ltere? Oder gibt es gar keinen Zusammenhang?\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Auf welchen Ger\'e4ten st\'fcrzt die App am h\'e4ufigsten ab, auf welchen am seltensten?\b\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone\b0 Es werden die 5 h\'f6chsten und die 5(?) niedrigsten Absturz-Werte mithilfe der Funktion von oben gesucht und dem entsprechenden Ger\'e4t zugeordnet\par
+{\pntext\f1\'B7\tab}Ein Histogramm soll darstellen, welche 5 Ger\'e4te die meisten, und ein weiteres, welche Ger\'e4te die wenigsten Abst\'fcrze verzeichnen\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Bewertungen bezogen auf L\'e4nder\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Ein weiteres L\'e4nderdiagramm, das farbig darstellen soll, wie die App in welchem Land bewertet wurde. Auch hier soll, wenn es funktioniert, ein L\'e4nderdiagramm von d3 benutzt werden.\par
+{\pntext\f1\'B7\tab}Dazu werden die einzelnen Bewertungen in Bezug zu der L\'e4nderbezeichnung eingelesen\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Summe der Installationen pro Jahr vergleichen\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Mithilfe einer Funktion, die die Summe einer Liste berechnet, werden die Installationswerte jeweils von 2015 und von 2016 addiert\par
+{\pntext\f1\'B7\tab}In einem horizontalen Balkendiagramm (pygal) sollen beide Werte eingelesen werden und zeigen, wie gro\'df der Unterschied in den beiden Jahren war\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Durchschnittsbewertung 2015\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Mithilfe einer Funktion, die den Durchschnitt der Werte in einer Liste berechnet, werden die Durchschnittsbewertung von 2015 berechnet\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Summe der Abst\'fcrze 2015\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Mithilfe einer Funktion, die die Summe einer Liste berechnet, werden die Abst\'fcrze von 2015 addiert\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul Wie viel Prozent der Nutzer, die die App installiert haben, behalten sie auch?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Es werden die "total user installs" und die "current user installs" jedes Landes addiert, anschlie\'dfend werden die beiden Werte in eine Funktion eingelesen, die den Prozentwert der "current user installs" berechnet. \ul\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1 Wie hoch ist die Deinstallationsquote?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone 100 minus den Wert, der vorher berechnet wurde. Das soll nur eine Zusatzinformation sein.\ul\par
+{\pntext\f1\'B7\tab}\ulnone Dadurch kann aber eine Art Kreisdiagramm erstellt werden, das den Anteil von Benutzern, die die App vehalten und Nutzern, die die App deinstallieren verdeutlichen soll\ul\par
+{\pntext\f1\'B7\tab}\ulnone Das soll f\'fcr beide Jahre gemacht und dann verglichen werden\ul\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ulnone\par
+\ul Wie hoch ist die Differenz zwischen Installationen und Deinstallationen?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone Es werden alle "daily user installs" und alle "daily user uninstalls" summiert. Das Ergebnis resultiert aus einem Bewertungszeitraum von 4 Tagen. Dann k\'f6nnen beide Werte im Vergleich visuaisiert werden\ul\par
+{\pntext\f1\'B7\tab}\ulnone Beide Werte k\'f6nnen dann ebenfalls in eine Funktion eingelesen werden, die die Prozents\'e4tze berechnet, die dann ebenfalls in einem Kreisdiagramm im direkten Vergleich der Anteile visualisiert werden k\'f6nnen\ul\par
+{\pntext\f1\'B7\tab}\ulnone Auch das kann jeweils f\'fcr 2015 und 2016 gemacht und dann verglichen werden\ul\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ulnone\par
+\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\par
+\ul Fazit\par
+\ulnone Zum Schluss sollen die Erkenntnisse noch einmal kurz zusammengefasst werden.\par
+\par
+\ul Bibliotheken, die auf jeden Fall ben\'f6tigt werden:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone csv\ul\par
+{\pntext\f1\'B7\tab}\ulnone matplotlib\ul\par
+{\pntext\f1\'B7\tab}\ulnone numpy\ul\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1 Bibliotheken, die eventuell benutzt werden:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-360\li720\sa200\sl276\slmult1\ulnone bokeh\par
+{\pntext\f1\'B7\tab}seaborn\par
+{\pntext\f1\'B7\tab}pygal\par
+{\pntext\f1\'B7\tab}plotly\par
+{\pntext\f1\'B7\tab}geoplotlib\par
+{\pntext\f1\'B7\tab}pandas.DataFrame\par
+{\pntext\f1\'B7\tab}d3\par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\ul\par
+Links die bei der Visualisierung helfen sollen:\par
+\ulnone Verschiedene Visualisierungstools mit Beispielen und Code:\par
+{{\field{\*\fldinst{HYPERLINK http://pbpython.com/visualization-tools-1.html }}{\fldrslt{http://pbpython.com/visualization-tools-1.html\ul0\cf0}}}}\f0\fs24\par
+{{\field{\*\fldinst{HYPERLINK https://www.dataquest.io/blog/python-data-visualization-libraries/ }}{\fldrslt{https://www.dataquest.io/blog/python-data-visualization-libraries/\ul0\cf0}}}}\f0\fs24\par
+10 verschiedene Visualisierungs-Bibliotheken mit Code:\par
+{{\field{\*\fldinst{HYPERLINK https://blog.modeanalytics.com/python-data-visualization-libraries/ }}{\fldrslt{https://blog.modeanalytics.com/python-data-visualization-libraries/\ul0\cf0}}}}\f0\fs28\par
+}
+ 

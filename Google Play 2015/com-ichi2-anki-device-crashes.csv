@@ -1,0 +1,527 @@
+# -------------------------------------------------------;;;
+# App: com.ichi2.anki, date: 20141212-20150112;;;
+# -------------------------------------------------------;;;
+;;;
+date;device;daily_crashes;daily_anrs
+20141221;Samsung Galaxy Note 8.0 (konalte);8;0
+20141220;Samsung Galaxy Note 8.0 (konalte);7;0
+20150103;Google Nexus 4 (mako);4;0
+20150103;Google Nexus 5 (hammerhead);4;0
+20141226;Samsung Galaxy Note4 (trlte);4;0
+20150107;Samsung Galaxy Note II (t03g);3;0
+20150106;Google Nexus 5 (hammerhead);3;0
+20141228;Samsung Europa (GT-I5510L);3;0
+20141227;Google Nexus 5 (hammerhead);3;0
+20141227;Sony Ericsson Xperia Go (ST27i);3;0
+20141224;HP SlateBook 14 (200a);3;0
+20141220;Sony Ericsson Xperia arc S (LT18i);3;0
+20141217;LGE L90 (w7n);3;0
+20141217;Samsung Galaxy S3 (m0);3;0
+20141216;Sony Ericsson Xperia L (C2105);3;0
+20150112;Samsung Galaxy Note4 (trelte);2;0
+20150112;Samsung Galaxy Nexus (maguro);2;0
+20150112;Samsung Galaxy Note3 (hltetmo);2;0
+20150112;Samsung Galaxy S3 (d2att);2;0
+20150111;nuclear-evb;2;0
+20150111;Google Nexus 4 (mako);2;0
+20150111;Motorola Moto X (ghost);2;0
+20150111;Samsung Galaxy S3 (d2lteMetroPCS);2;0
+20150111;Xiaomi MI 3W (cancro);2;0
+20150109;Samsung Galaxy Note 10.1 2014 Edition (lt03wifi);2;0
+20150108;wiko;2;0
+20150108;Samsung Galaxy S4 Mini  (serranolte);2;0
+20150108;Samsung Galaxy S3 (d2lteMetroPCS);2;0
+20150108;Sony Ericsson Xperia Z1 (C6903);2;0
+20150107;Google Nexus 5 (hammerhead);2;0
+20150106;LGE LG Optimus L7 II (vee7e);2;0
+20150105;Samsung Galaxy Note 8.0 (konawifi);2;0
+20150105;Google Nexus 5 (hammerhead);2;0
+20150105;Asus TF700T (TF700T);2;0
+20150105;Symphony Teleca OnePlus One (A0001);2;0
+20150104;Samsung Galaxy Note3 (hltevzw);2;0
+20150104;Samsung Galaxy S2 (GT-I9100);2;0
+20150103;Samsung Galaxy Note 10.1 (p4noterf);2;0
+20150103;Samsung Galaxy S5 (klte);2;0
+20150103;Samsung Galaxy S4 (ja3g);2;0
+20150103;LGE LG G3 (g3);2;0
+20150103;Google Nexus 7 (flo);2;0
+20150102;HTC HTC One SV (k2cl);2;0
+20150102;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);2;0
+20150101;Samsung Galaxy S4 (jflte);2;0
+20141230;Samsung Galaxy S4 (jflte);2;0
+20141230;Sony Ericsson Xperia L (C2105);2;0
+20141229;Samsung Galaxy Tab3 7.0  (lt023g);2;0
+20141229;Samsung Galaxy Note3 (hlte);2;0
+20141229;Google Nexus 5 (hammerhead);2;0
+20141229;Motorola Moto G (falcon_umts);2;0
+20141229;Motorola MB865 (edison);2;0
+20141228;HTC HTC Desire C (golfu);2;0
+20141228;Samsung Galaxy Core (arubaslim);2;0
+20141227;Lenovo Mobile Lenovo S660 (S660);2;0
+20141225;Google Nexus 6 (shamu);2;0
+20141225;Vertis_4510_Expi;2;0
+20141223;LGE L90 (w7n);2;0
+20141223;HTC HTC One (m7);2;0
+20141221;Samsung Galaxy Note4 (trlte);2;0
+20141220;LGE L90 (w7n);2;0
+20141220;HTC Thunderbolt (mecha);2;0
+20141220;Google Nexus 4 (mako);2;0
+20141220;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);2;0
+20141219;HTC Thunderbolt (mecha);2;0
+20141219;Google Nexus 5 (hammerhead);2;0
+20141219;Asus Fonepad 7 (FE375CG) (K019_1);2;0
+20141218;Samsung Galaxy Young2 (young2nfc3g);2;0
+20141217;wiko;2;0
+20141217;HTC HTC One (M8) (htc_m8wl);2;0
+20141216;Google Nexus 4 (mako);2;1
+20141215;Samsung Galaxy S4 (jflte);2;0
+20141215;LGE LG G3 (g3);2;0
+20141215;Samsung Galaxy Tab 8.9 (GT-P7310);2;0
+20141214;Pantech EF35L (ef35l);2;0
+20141214;Asus ASUS Fonepad 7 LTE (K00Y);2;0
+20141213;ratech72_wet_rlk_jb3;2;0
+20141213;Samsung Galaxy Tab S 10.5 (chagallwifi);2;0
+20150112;Motorola DROID RAZR HD (vanquish);1;0
+20150112;Motorola Moto Defy XT (tinboostplus_cdma);1;0
+20150112;Samsung Galaxy S4 Mini (serranods);1;0
+20150112;Panasonic Mobile Communications P-01D (pana2_1);1;0
+20150112;Huawei Y210 (oay210);1;0
+20150112;Google Nexus 4 (mako);1;0
+20150112;Samsung Galaxy S3 (m0);1;0
+20150112;Samsung Galaxy Note3 (hlte);1;0
+20150112;Samsung Galaxy Tab3 Lite (goyawifi);1;0
+20150112;Sony Ericsson Xperia Go (ST27i);1;0
+20150112;Lenovo Mobile Lenovo S890 (S890);1;0
+20150112;Sony Ericsson Xperia Z1 (C6903);1;0
+20150111;wiko;1;0
+20150111;HTC Incredible 2 (vivow);1;0
+20150111;Samsung Galaxy Note Pro 12.2 (v1awifi);1;0
+20150111;Samsung Galaxy Note4 (trlte);1;0
+20150111;Samsung Galaxy S3 (m0);1;0
+20150111;Samsung Galaxy Note 10.1 2014 Edition (lt03wifi);1;0
+20150111;LGE L Fino (l70pn);1;0
+20150111;Samsung Galaxy S5 Mini (kminilte);1;0
+20150111;Samsung Galaxy Note3 (hltetmo);1;0
+20150111;Google Nexus 7 (flo);1;0
+20150111;Samsung Galaxy S3 (d2att);1;0
+20150111;Samsung Galaxy S3 (c1lgt);1;0
+20150111;Positivo Positivo Ypy 10STB (YPY_10STB);1;0
+20150111;Sony Ericsson Xperia Z1 (C6903);1;0
+20150110;wiko;1;0
+20150110;Motorola Defy (umts_jordan);1;0
+20150110;Samsung Galaxy Note4 (trlteatt);1;0
+20150110;Samsung Galaxy Note II (t03g);1;0
+20150110;Google Nexus 10 (manta);1;0
+20150110;LGE G Pro Lite (luv90ds);1;0
+20150110;Samsung Galaxy S5 (kltespr);1;0
+20150110;Huawei Y330-U11 (hwY330-U11);1;0
+20150110;HTC HTC One (M8) (htc_m8);1;0
+20150110;Google Nexus 5 (hammerhead);1;0
+20150110;Samsung Galaxy Note3 (ha3g);1;0
+20150110;Motorola Moto X (ghost);1;0
+20150110;Samsung Samsung Garda (gardaltetmo);1;0
+20150110;LGE LG G2 (g2);1;0
+20150110;Samsung Galaxy S3 (d2att);1;0
+20150110;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20150110;SHARP AQUOS PHONE  SERIE SHL23 (SHL23);1;0
+20150110;Sony Xperia Z3 Tablet Compact (SGP621);1;0
+20150110;Lenovo Mobile Lenovo S660 (S660);1;0
+20150110;Gigabyte Prestigio PMT5587_Wi (AML8726-MXS);1;0
+20150109;LGE L90 (w7n);1;0
+20150109;LGE LG Optimus L7 II (vee7e);1;0
+20150109;HTC HTC Desire X (protou);1;0
+20150109;HTC Wildfire S (marvel);1;0
+20150109;Samsung Galaxy Ace3 (loganrelte);1;0
+20150109;Samsung Galaxy S5 Mini (kminilte);1;0
+20150109;Samsung Galaxy S4 (jflte);1;0
+20150109;Google Nexus 5 (hammerhead);1;0
+20150109;Motorola Droid X (cdma_shadow);1;0
+20150109;Sony Ericsson Xperia A (SO-04E);1;0
+20150109;Sony Xperia Z3 Tablet Compact (SGP621);1;0
+20150109;Sony Ericsson Xperia M2 (D2303);1;0
+20150109;A97-01;1;0
+20150108;HTC HTC Desire 500 (z4u);1;0
+20150108;Motorola MOTO G (titan_umts);1;0
+20150108;Samsung Galaxy Tab4 10.1 (matissewifiue);1;0
+20150108;Samsung Galaxy Trend (kyleve);1;0
+20150108;Samsung Galaxy Note3 Neo (hl3gds);1;0
+20150108;Google Nexus 5 (hammerhead);1;0
+20150108;LGE LG Optimus G (geehrc);1;0
+20150108;Google Nexus 7 (flo);1;0
+20150108;Motorola Moto G (falcon_cdma);1;0
+20150108;LGE Optimus F6 (f6);1;0
+20150108;HTC HTC One X+ (enrc2b);1;0
+20150108;HTC Desire (bravo);1;0
+20150108;Samsung Galaxy Core Safe (arubaslimss);1;0
+20150108;Samsung Galaxy Tab (GT-P1000);1;0
+20150108;Symphony Teleca OnePlus One (A0001);1;0
+20150107;wiko;1;0
+20150107;Samsung Galaxy Tab3 10.1 (santos10wifi);1;0
+20150107;HTC Sensation 4G (pyramid);1;0
+20150107;Google Nexus 4 (mako);1;0
+20150107;Samsung Galaxy S5 (kltetmo);1;0
+20150107;LGE LG G3 (g3);1;0
+20150107;Motorola Moto G (falcon_cdma);1;0
+20150107;Samsung Galaxy S3 (d2can);1;0
+20150107;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20150107;Sony Ericsson Xperia acro HD (IS12S);1;0
+20150107;GSmart_Rio_R1;1;0
+20150107;Sony Ericsson Xperia M2 (D2303);1;0
+20150106;LGE L90 (w7n);1;0
+20150106;LGE LG Optimus L5 II (vee5nfc);1;0
+20150106;LGE LG Optimus L7 (u0);1;0
+20150106;Samsung Galaxy Note II (t03g);1;0
+20150106;HTC HTC One V (primou);1;0
+20150106;Samsung Galaxy Star (mint);1;0
+20150106;Google Nexus 4 (mako);1;0
+20150106;Samsung Galaxy Tab3 8.0 (lt013g);1;0
+20150106;Samsung Galaxy S5 (kltetmo);1;0
+20150106;Motorola Moto G (falcon_umts);1;0
+20150106;LGE LG Optimus L3 (e0);1;0
+20150106;HTC Desire (bravoc);1;0
+20150106;Sony Ericsson Xperia Miro (ST23i);1;0
+20150106;Sony Ericsson Xperia Z1 (C6903);1;0
+20150106;Kyocera Corporation Hydro VIBE (C6725);1;0
+20150106;Sony Ericsson Xperia Z (C6603);1;0
+20150106;Lenovo Mobile Lenovo A536 (A536);1;0
+20150105;Samsung Galaxy S4 Mini  (serranolte);1;0
+20150105;HTC HTC Desire X dual sim (protodug);1;0
+20150105;HTC HTC One (M8) (htc_m8wl);1;0
+20150105;HTC HTC One (M8) (htc_m8);1;0
+20150105;Google Nexus 7 (2012) (grouper);1;0
+20150105;Motorola Moto G (falcon_umts);1;0
+20150105;Samsung Galaxy TabS 10.5  (chagalllte);1;0
+20150105;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20150105;Asus ASUS Transformer Pad TF300T (TF300T);1;0
+20150105;Sony Ericsson Xperia Tipo (ST21i);1;0
+20150105;Samsung Galaxy Tab (SC-01C);1;0
+20150105;Lenovo Mobile Lenovo S660 (S660);1;0
+20150105;Sony Ericsson Xperia acro HD (IS12S);1;0
+20150105;Samsung Galaxy Mini2 (GT-S6500D);1;0
+20150105;Samsung Galaxy Y (GT-S5360);1;0
+20150105;Sony Ericsson Xperia M2 (D2303);1;0
+20150105;Sony Ericsson Xperia L (C2105);1;0
+20150104;HTC HTC Desire 500 (z4u);1;0
+20150104;Samsung Galaxy Note II (t03g);1;0
+20150104;Samsung Galaxy Tab3 10.1 (santos10wifi);1;0
+20150104;Google Nexus 10 (manta);1;0
+20150104;Samsung Galaxy Tab S 8.4 (klimtlte);1;0
+20150104;Samsung Galaxy S4 (jflte);1;0
+20150104;LGE G3 S (jagnm);1;0
+20150104;Huawei Y330-U07 (hwY330-U07);1;0
+20150104;Samsung Galaxy Note3 (hlte);1;0
+20150104;Google Nexus 5 (hammerhead);1;0
+20150104;Samsung Galaxy Tab S 10.5 (chagallwifi);1;0
+20150104;Samsung Galaxy TabS 10.5  (chagalllte);1;0
+20150104;Samsung Galaxy Y (GT-S5360);1;0
+20150104;Samsung Galaxy Tab 10.1 (GT-P7500);1;0
+20150104;Sony Ericsson Xperia Z1 (C6903);1;0
+20150103;HTC HTC Desire 500 (z4u);1;0
+20150103;LGE LG Optimus L3 II (vee3e);1;0
+20150103;Samsung Galaxy S3 (m0);1;0
+20150103;Samsung Galaxy S5 Active (klteattactive);1;0
+20150103;Samsung Galaxy S4 (jfltespr);1;0
+20150103;LGE LG G2 (g2);1;0
+20150103;Motorola Moto G (falcon_umts);1;0
+20150103;Samsung Galaxy S3 (d2spr);1;0
+20150103;Sony Ericsson Xperia Z1 (SOL23);1;0
+20150103;SHARP  Q-pot.Phone SH-04D (SH04D);1;0
+20150103;Asus PadFone (PadFone);1;0
+20150103;Asus Asus Transformer Pad (K018);1;0
+20150103;Sony Ericsson Xperia Z1 (C6903);1;0
+20150102;LGE LG Optimus L5 II (vee5ss);1;0
+20150102;LGE LG Optimus L3 II (vee3e);1;0
+20150102;Samsung Galaxy Note II (t03g);1;0
+20150102;HTC Wildfire S (marvel);1;0
+20150102;Samsung Galaxy S3 (m0);1;0
+20150102;LGE G3 S (jag3gds);1;0
+20150102;HTC HTC Desire 310 (htc_v1_u);1;0
+20150102;Samsung Galaxy Note3 (hlte);1;0
+20150102;LGE LG G3 (g3);1;0
+20150102;Google Nexus 7 (flo);1;0
+20150102;Lenovo Mobile Lenovo S660 (S660);1;0
+20150102;Samsung Galaxy Gio (GT-S5660);1;0
+20150102;Sony Ericsson Xperia Z Ultra (C6833);1;0
+20150102;Asus ZenFone 4 (ASUS_T00Q);1;0
+20150101;LGE LG Optimus One (thunderg);1;0
+20150101;Google Nexus 4 (mako);1;0
+20150101;Samsung Galaxy Ace3 (loganrelte);1;0
+20150101;Samsung Galaxy S4 (jfvelte);1;0
+20150101;Samsung Galaxy S4 (jftdd);1;0
+20150101;Google Nexus 5 (hammerhead);1;0
+20150101;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20150101;Sony Ericsson Xperia Tipo (ST21i);1;0
+20150101;Sony Ericsson Xperia Z1 (SOL23);1;0
+20150101;Samsung Galaxy Y (GT-S5360);1;0
+20150101;Samsung Galaxy Tab (GT-P1000);1;0
+20150101;Samsung Galaxy S2 (GT-I9100);1;0
+20150101;TCT Mobile Limited (Alcatel) ALCATEL ONE TOUCH 6040X (DIABLOX);1;0
+20141231;Google Nexus 4 (mako);1;0
+20141231;Samsung Galaxy S5 (klte);1;0
+20141231;Huawei Y300 (hwY300-0100);1;0
+20141231;Archos Hudl HT7S3 (ht7s3);1;0
+20141231;Google Nexus 9 (flounder);1;0
+20141231;Google Nexus 7 (flo);1;0
+20141231;Samsung Galaxy S3 (d2lteMetroPCS);1;0
+20141231;HTC Desire (bravo);1;0
+20141231;HTC ADR6330VW (blissc);1;0
+20141231;TCT Mobile Limited (Alcatel) ALCATEL ONE TOUCH 997D (Martell_GSM);1;0
+20141231;Sony Ericsson Xperia M2 (D2303);1;0
+20141231;Asus ZenFone 4 (ASUS_T00Q);1;0
+20141230;Symphony Teleca W032I_C3 (w032i_c3);1;0
+20141230;SK Telesys ITP-R208W (rk30sdk);1;0
+20141230;Huawei Y210 (oay210);1;0
+20141230;Samsung Galaxy Tab3 7.0  (lt023g);1;0
+20141230;HTC HTC 710C (htc_a5chl);1;0
+20141230;Google Nexus 5 (hammerhead);1;0
+20141230;flounder_lte;1;0
+20141230;Motorola Moto G (falcon_cdma);1;0
+20141230;Samsung Galaxy Tab2 7.0 (espressorf);1;0
+20141230;Asus Eee Pad Transformer Prime (TF201);1;0
+20141230;Sony Ericsson Xperia Go (ST27i);1;0
+20141230;Sony Ericsson Xperia M2 (D2303);1;0
+20141229;Motorola XT910 (umts_spyder);1;0
+20141229;HTC HTC One SV (k2ul);1;0
+20141229;Samsung Galaxy S4 (jfltespr);1;0
+20141229;Google Nexus 9 (flounder);1;0
+20141229;Samsung Sidekick (SGH-T839);1;0
+20141229;NEC MEDIAS PP N-01D (N-01D);1;0
+20141229;Sony Ericsson Xperia acro HD (IS12S);1;0
+20141229;Sony Ericsson Xperia L (C2105);1;0
+20141228;LGE L90 (w7ds);1;0
+20141228;u8120;1;0
+20141228;NVidia SHIELD Tablet (shieldtablet);1;0
+20141228;Samsung Galaxy S5 (klte);1;0
+20141228;HTC HTC One SV (k2ul);1;0
+20141228;Google Nexus 5 (hammerhead);1;0
+20141228;Google Nexus 9 (flounder);1;0
+20141227;HTC Wildfire S (marvel);1;0
+20141227;HTC HTC One (m7);1;0
+20141227;Samsung Galaxy Tab3 8.0 (lt01wifi);1;0
+20141227;Samsung Galaxy Ace3 (loganrelte);1;0
+20141227;Samsung Galaxy S4 (ja3g);1;0
+20141227;hwt1821l;1;0
+20141227;HTC HTC Velocity 4G (holiday);1;0
+20141227;Google Nexus 7 (2012) (grouper);1;0
+20141227;Samsung Galaxy S3 Mini (golden);1;0
+20141227;LGE G2 MINI (g2m);1;0
+20141227;Samsung Galaxy Core (arubaslim);1;0
+20141227;Asus Fonepad 7 (K00Z);1;0
+20141227;Sony Xperia Z3 Compact (D5803);1;0
+20141226;rossaltexsa;1;0
+20141226;Panasonic Mobile Communications P-01D (pana2_1);1;0
+20141226;Samsung Galaxy S3 (m3);1;0
+20141226;Samsung Galaxy S5 Active (klteattactive);1;0
+20141226;HTC HTC One SV (k2ul);1;0
+20141226;Samsung Galaxy S4 (jfltespr);1;0
+20141226;Google Nexus 5 (hammerhead);1;0
+20141226;Samsung Galaxy Note3 (ha3g);1;0
+20141226;Google Nexus 7 (2013) (deb);1;0
+20141226;Samsung Galaxy S3 (d2lteMetroPCS);1;0
+20141226;Sony Ericsson Xperia Go (ST27i);1;0
+20141226;Samsung Galaxy S2 (GT-I9100);1;0
+20141226;Sony Ericsson Xperia M (C1905);1;0
+20141225;LGE LG Optimus L3 II (vee3e);1;0
+20141225;Lenovo Mobile Lenovo S880 (s880_row);1;0
+20141225;Barnes and Noble NOOK® HD+ (ovation);1;0
+20141225;Samsung Galaxy S4 (jflte);1;0
+20141225;Huawei U8650 (hwu8650);1;0
+20141225;HTC HTC One (M8) (htc_m8);1;0
+20141225;Google Nexus 5 (hammerhead);1;0
+20141225;LGE LG G3 (g3);1;0
+20141225;HTC HTC Rhyme S510b (bliss);1;0
+20141225;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20141225;Sony Ericsson Xperia Z1 (SOL23);1;0
+20141225;Sony Ericsson Xperia V (LT25i);1;0
+20141225;Samsung Galaxy Tab 7.0 Plus (GT-P6201);1;0
+20141224;Samsung Galaxy Note2 (t0lte);1;0
+20141224;smb_a1002;1;0
+20141224;Google Nexus 4 (mako);1;0
+20141224;Samsung Galaxy S3 (m0);1;0
+20141224;kylin-mb976a9;1;0
+20141224;Samsung Galaxy S4 (jfltespr);1;0
+20141224;Samsung Galaxy Note3 (hltevzw);1;0
+20141224;Samsung Galaxy S3 Mini (goldenltevzw);1;0
+20141224;Samsung Galaxy S3 Mini (golden);1;0
+20141224;Sony Ericsson Xperia GX (SO-04D);1;0
+20141224;Sony Ericsson Xperia Z1 Compact (D5503);1;0
+20141224;Sony Ericsson Xperia T2 Ultra (D5322);1;0
+20141224;Asus ZenFone 5 (ASUS_T00J);1;0
+20141223;Samsung Galaxy Note 8.0 (konawifi);1;0
+20141223;Samsung Galaxy S5 (kltevzw);1;0
+20141223;Google Nexus 5 (hammerhead);1;0
+20141223;Samsung Galaxy S3 Mini (golden);1;0
+20141223;LGE LG G3 (g3);1;0
+20141223;LGE LG G Pad 8.3 (awifi);1;0
+20141223;HTC Desire HD (ace);1;0
+20141223;Sony Ericsson Xperia neo V (MT11i);1;0
+20141223;Samsung Galaxy S2 (GT-I9100);1;0
+20141223;Samsung Galaxy S Plus (GT-I9001);1;0
+20141223;TCT Mobile Limited (Alcatel) POP 2 (Alto45);1;0
+20141222;HTC G2 (vision);1;0
+20141222;Samsung Galaxy Note4 (trlte);1;0
+20141222;Samsung Galaxy Note2 (t0ltevzw);1;0
+20141222;Samsung Galaxy Note2 (t0lteskt);1;0
+20141222;Google Nexus 4 (mako);1;0
+20141222;Samsung Galaxy S4 (jflte);1;0
+20141222;Samsung Galaxy S4 (ja3g);1;0
+20141222;Samsung Galaxy Note3 (hlte);1;0
+20141222;LGE LG G3 (g3);1;0
+20141222;Samsung Galaxy S3 (d2lteMetroPCS);1;0
+20141222;Lenovo Mobile Lenovo S660 (S660);1;0
+20141222;Huawei Y600 (HWY600-U);1;0
+20141222;Samsung Galaxy S2 (GT-I9100);1;1
+20141222;Samsung Europa (GT-I5510L);1;0
+20141221;Samsung Galaxy Note II (t03g);1;0
+20141221;Lenovo Mobile Lenovo S880 (s880_row);1;0
+20141221;Samsung Galaxy Note 10.1 2014 Edition (lt03wifi);1;0
+20141221;Samsung Galaxy S5 (klte);1;0
+20141221;Samsung Galaxy S4 Active (jactivelte);1;0
+20141221;Huawei U8655-1 (hwu8655);1;0
+20141221;Samsung Samsung Galaxy Stratosphere2 (aegis2vzw);1;0
+20141221;Sony Ericsson Xperia U (ST25i);1;0
+20141221;SHARP AQUOS PHONE ZETA SH-02E (SH02E);1;0
+20141221;TCT Mobile Limited (Alcatel) IDOL 2 S (EOS4G);1;0
+20141220;wiko;1;0
+20141220;HTC HTC One (m7);1;0
+20141220;Google Nexus 5 (hammerhead);1;0
+20141220;Motorola Moto G (falcon_umts);1;0
+20141220;Sony Ericsson Xperia Miro (ST23i);1;0
+20141220;Sony Ericsson Xperia M2 (D2303);1;0
+20141219;Samsung Galaxy Note Pro 12.2 (v1awifi);1;0
+20141219;Samsung Galaxy S4 (jflte);1;0
+20141219;Motorola Moto G (falcon_cdma);1;0
+20141219;Samsung Galaxy Tab2 10.1 (espresso10wifi);1;0
+20141219;Samsung Galaxy Tab4 7.0 (degaswifi);1;0
+20141219;Motorola Droid X (cdma_shadow);1;0
+20141219;HTC Wildfire (buzz);1;0
+20141219;Lenovo Mobile Lenovo TAB S8-50F (S8-50F);1;0
+20141219;Lenovo Mobile P780 (P780_ROW);1;0
+20141219;Sony Ericsson Xperia M (C1905);1;0
+20141219;Lenovo Mobile B6000-H (B6000);1;0
+20141218;LGE L90 (w7n);1;0
+20141218;HTC Incredible 2 (vivow);1;0
+20141218;Samsung Galaxy Note2 (t0ltevzw);1;0
+20141218;Samsung Galaxy Tab Pro 8.4 (mondrianwifiue);1;0
+20141218;HTC HTC One (m7);1;0
+20141218;Samsung Galaxy Ace3 (loganrelte);1;0
+20141218;Samsung Galaxy S4 (jflteatt);1;0
+20141218;Samsung Galaxy S4 (jflte);1;0
+20141218;Samsung Galaxy Note3 Neo (hllte);1;0
+20141218;Motorola Moto G (falcon_umts);1;0
+20141218;Samsung Galaxy Tab2 7.0 (espressowifi);1;0
+20141218;HTC HTC One X+ (enrc2b);1;0
+20141218;LGE LG Connect 4G (cayman);1;0
+20141218;Symphony Teleca MultiPhone 5455 DUO (PSP5455DUO);1;0
+20141218;FLY IQ4413 Quad (IQ4413_Quad);1;0
+20141218;Samsung Galaxy Tab 8.9 (GT-P7310);1;0
+20141218;Samsung Galaxy S2 (GT-I9100);1;0
+20141217;telacom15_gb2;1;0
+20141217;tate;1;0
+20141217;HTC Sensation 4G (pyramid);1;0
+20141217;HTC HTC One (M8) (htc_m8);1;0
+20141217;Google Nexus 5 (hammerhead);1;0
+20141217;LGE LG G2 (g2);1;0
+20141217;Google Nexus 9 (flounder);1;0
+20141217;Samsung Galaxy Tab4 7.0 (degaswifi);1;0
+20141217;LGE LG-P720h (cx2);1;0
+20141217;Lenovo Mobile A706 (armani);1;0
+20141217;Acer Iconia Tab 10 (acer_harleyfhd);1;0
+20141217;Quanta Corporation Lifetab P9514 (LIFETAB_P9514);1;0
+20141217;TCT Mobile Limited (Alcatel) ALCATEL ONE TOUCH 6030X (Diablo);1;0
+20141217;Sony Ericsson Xperia E (C1505);1;0
+20141216;HTC Incredible 2 (vivow);1;0
+20141216;Samsung Galaxy S4 Mini  (serranolte);1;0
+20141216;Samsung Galaxy S4 Mini (serranods);1;0
+20141216;HTC HTC One (m7);1;0
+20141216;Samsung Galaxy S5 (klte);1;0
+20141216;Samsung Galaxy S4 (jfltecan);1;0
+20141216;Samsung Galaxy S4 (jflte);1;0
+20141216;Huawei HUAWEI Y210-0100 (hwy210-0100);1;0
+20141216;Huawei S10 (hws10201l);1;0
+20141216;Huawei Y300 (hwY300-0100);1;0
+20141216;Google Nexus 5 (hammerhead);1;0
+20141216;Google Nexus 7 (2012) (grouper);1;0
+20141216;LGE LG G2 (g2);1;0
+20141216;Motorola Moto G (falcon_umts);1;0
+20141216;Samsung Galaxy S3 (d2lteMetroPCS);1;0
+20141216;Sony Ericsson Xperia U (ST25i);1;0
+20141216;Sony Ericsson Xperia M2 (D2303);1;0
+20141215;wiko;1;0
+20141215;Google Nexus 6 (shamu);1;0
+20141215;Google Nexus 10 (manta);1;0
+20141215;Samsung Galaxy Note 10.1 2014 Edition (lt03wifi);1;0
+20141215;Samsung Galaxy S5 Mini (kminilte);1;0
+20141215;Samsung Galaxy S5 (kltevzw);1;0
+20141215;Samsung Galaxy S5 Active (klteattactive);1;0
+20141215;Google Nexus 5 (hammerhead);1;0
+20141215;HTC HTC Desire 600 Dual SIM (cp3dug);1;0
+20141215;Sony Ericsson Live with Walkman (WT19i);1;0
+20141215;Sony Ericsson Xperia mini pro (SK17i);1;0
+20141215;Samsung Galaxy S2 (SGH-T989);1;0
+20141214;Motorola Moto G (titan_umtsds);1;0
+20141214;Motorola Moto Defy XT (tinboostplus_cdma);1;0
+20141214;Samsung Galaxy Note2 (t0ltevzw);1;0
+20141214;Samsung Galaxy S4 Mini  (serranolte);1;0
+20141214;Google Nexus 4 (mako);1;0
+20141214;Samsung Galaxy S3 (m0);1;0
+20141214;Samsung Galaxy Tab3 8.0 (lt01wifi);1;0
+20141214;Samsung Galaxy S4 (jflte);1;0
+20141214;Google Nexus 5 (hammerhead);1;0
+20141214;Samsung Galaxy Note3 (ha3g);1;0
+20141214;Motorola Moto G (falcon_umts);1;0
+20141214;HTC Wildfire (buzz);1;0
+20141214;TCT Mobile Limited (Alcatel) ALCATEL ONE TOUCH 7024W (Rav4);1;0
+20141214;Samsung Galaxy Ace (GT-S5830);1;0
+20141214;Sony Xperia Z3 (D6653);1;0
+20141214;Sony Ericsson Xperia M2 (D2303);1;0
+20141214;Sony Ericsson Xperia M (C1905);1;0
+20141213;HTC Incredible 2 (vivow);1;0
+20141213;Google Nexus 6 (shamu);1;0
+20141213;Huawei U8500 (msm7225);1;0
+20141213;HTC HTC One (m7);1;0
+20141213;Google Nexus 5 (hammerhead);1;0
+20141213;Motorola Moto G (falcon_umts);1;0
+20141213;Samsung Galaxy Tab2 10.1 (espresso10rf);1;0
+20141213;Samsung Galaxy S3 (d2vzw);1;0
+20141213;H928;1;0
+20141213;Sony Ericsson Xperia M2 (D2303);1;0
+20141213;HP SlateBook 14 (200a);1;0
+20141212;Samsung Galaxy S4 Mini  (serranolte);1;0
+20141212;Samsung Galaxy Note 10.1 (p4notewifi);1;0
+20141212;Samsung Galaxy Trend Plus (kylepro);1;0
+20141212;Samsung Galaxy S5 (kltevzw);1;0
+20141212;Huawei P6S-L04 (hwp6s-l04);1;0
+20141212;Huawei Y530 (hwY530-U00);1;0
+20141212;Barnes and Noble NOOK® HD (hummingbird);1;0
+20141212;Samsung Galaxy Note3 Neo (hl3gds);1;0
+20141212;Google Nexus 5 (hammerhead);1;0
+20141212;Google Nexus 7 (2012) (grouper);1;0
+20141212;Motorola Moto X (ghost);1;0
+20141212;LGE LG Optimus G (geehrc);1;0
+20141212;RW110;1;0
+20141212;Asus Fonepad 7 (FE375CG) (K019_1);1;0
+20141212;GENERAL_MOBILE;1;0
+20141212;Lenovo Mobile Lenovo A5500-HV (A5500-HV);1;0
+20150110;Samsung Galaxy S2 (GT-I9100);0;1
+20150106;HTC Incredible 2 (vivow);0;1
+20150106;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20150105;Samsung Galaxy S3 (m0);0;2
+20150104;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20150103;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20150103;Samsung Galaxy S2 (GT-I9100);0;1
+20150101;Asus TF700T (TF700T);0;1
+20141230;HTC Desire HD (ace);0;1
+20141230;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20141230;Asus ASUS Transformer Pad TF300T (TF300T);0;2
+20141230;Samsung Galaxy S2 Plus (GT-I9100G);0;1
+20141229;HTC Desire (bravo);0;1
+20141229;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20141227;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20141225;Samsung Galaxy S3 (m0);0;1
+20141225;Asus ASUS Transformer Pad TF300TG (TF300TG);0;1
+20141224;Asus ASUS Transformer Pad TF300TG (TF300TG);0;2
+20141217;Samsung Galaxy Nexus (maguro);0;1
+20141217;Sony Ericsson Xperia V (LT25i);0;1
+20141215;Google Nexus 7 (flo);0;1
+20141215;Sony Ericsson Xperia L (C2105);0;1
