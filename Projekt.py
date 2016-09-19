@@ -47,6 +47,12 @@ def aufsteigend(liste1, liste2): #Liste1 und Liste2 werden eingelesen
 		del(liste1[liste1.index(min(liste1))])
 		i = i+1
 	return aufsteigendeliste
+	
+def summe(liste):
+	summe = 0
+	for i in liste:
+		summe += i
+	return summe
 
 	
 #Listen erstellen 
@@ -61,6 +67,7 @@ language_installs_2015 = []
 country_installs_2016 = []
 overview_2016 = []
 language_installs_2016 = []
+country_installs_complete_2016 = []
 
 #Listen für die benötigten Spalten
 total_user_installs_2015 = []
@@ -99,6 +106,13 @@ crashes_2015_version = []
 crashes_2015_version_2 = []
 version = []
 version_2 = []
+laenderabkuerzungen_2015_ratings = []
+ratings_2015 = []
+ratings_2015_2 = []
+daily_installs_2015 = []
+daily_installs_2015_2 = []
+daily_installs_2016 = []
+daily_installs_2016_2 = []
 
 
 #Einlesen der CSV-Dateien im Ordner Google Play 2015
@@ -121,7 +135,7 @@ with open ('Google Play 2015/com-ichi2-anki-country-installs-complete.csv', 'rU'
 with open ('Google Play 2015/com-ichi2-anki-country-ratings.csv', 'rU') as csv_input:
 	reader = csv.reader(csv_input, delimiter=';')
 	for row in reader:
-		country_ratings_2015.append(row)
+		country_ratings_2015.append(row) #Bewertungen sind kaputt
 		
 with open ('Google Play 2015/com-ichi2-anki-device-crashes.csv', 'rU') as csv_input:
 	reader = csv.reader(csv_input, delimiter=';')
@@ -150,6 +164,11 @@ with open ('Google Play 2016/installs_com.ichi2.anki_201603_language.csv', 'rU')
 	reader = csv.reader(csv_input, delimiter=';')
 	for row in reader:
 		language_installs_2016.append(row)
+		
+with open ('Google Play 2016/installs_com.ichi2.anki_201603_country_complete.csv', 'rU') as csv_input:
+	reader = csv.reader(csv_input, delimiter=';')
+	for row in reader:
+		country_installs_complete_2016.append(row)
 
 		
 #Voranstehende, bedeutungslose Listenelemente löschen
@@ -160,6 +179,9 @@ del language_installs_2016[0:3]
 del device_crashes_2015[0:5]
 del version_crashes_2015[0:5]
 del version_crashes_2015[-1]
+del country_ratings_2015[0:5]
+del country_installs_complete_2015[0:5]
+del country_installs_complete_2016[0:1]
 
 
 #Listen mit einzelnen Spalten befüllen
@@ -196,6 +218,16 @@ for eintrag in device_crashes_2015:
 for eintrag in version_crashes_2015:
 	version.append(eintrag[1])
 	crashes_2015_version.append(eintrag[2])
+	
+for eintrag in country_ratings_2015:
+	laenderabkuerzungen_2015_ratings.append(eintrag[1])
+	ratings_2015.append(eintrag[3])
+	
+for eintrag in country_installs_complete_2015:
+	daily_installs_2015.append(eintrag[8])
+	
+for eintrag in country_installs_complete_2016:
+	daily_installs_2016.append(eintrag[9])
 
 	
 #String in Integer umwandeln
@@ -224,6 +256,15 @@ for string in crashes_2015_version:
 	
 for string in version:
 	version_2.append(int(string))
+	
+#for string in ratings_2015:
+#	ratings_2015_2.append(float(string))
+
+for string in daily_installs_2015:
+	daily_installs_2015_2.append(int(string))
+	
+for string in daily_installs_2016:
+	daily_installs_2016_2.append(int(string))
 
 
 #Berechnungen
@@ -243,7 +284,11 @@ flop40crashes_2015 = flop40(crashes_2015_flop_2, devices)
 
 versionen_crashes_aufsteigend = aufsteigend(version_2, crashes_2015_version_2)
 
-print (versionen_crashes_aufsteigend)
+summe_installs_2015 = summe(daily_installs_2015_2)
+
+summe_installs_2016 = summe(daily_installs_2016_2)
+
+print (summe_installs_2015, summe_installs_2016)
 		
 
 #Diagramme
@@ -251,4 +296,7 @@ print (versionen_crashes_aufsteigend)
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
 #TODO: Histogramm aus language_installs_2015 und language_installs_2016
 #TODO: Histogramm aus device_crashes_2015
-#TODO: 
+#TODO: Histogramm mit Verlaufskurve (seaborn) erstellen, das zeigt, wie die Zahl der Abstürze sich mit den App-Versionen verändert hat
+#TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
+#TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
+#TODO: horizontales Balkendiagramm (pygal), mit Daten aus summe_installs_2015 und summe_installs_2016
