@@ -53,6 +53,13 @@ def summe(liste):
 	for i in liste:
 		summe += i
 	return summe
+	
+def differenz_in_prozent(wert1,wert2):
+	float(wert1)
+	float(wert2)
+	diff = wert1/wert2
+	diff = diff*100
+	return diff
 
 	
 #Listen erstellen 
@@ -97,6 +104,7 @@ total_user_installs_2016_languages_flop = []
 total_user_installs_2016_languages_top_2 = []
 total_user_installs_2016_languages_flop_2 = []
 crashes_2015 = []
+crashes_2015_2 = []
 crashes_2015_top = []
 crashes_2015_flop = []
 crashes_2015_top_2 = []
@@ -113,6 +121,22 @@ daily_installs_2015 = []
 daily_installs_2015_2 = []
 daily_installs_2016 = []
 daily_installs_2016_2 = []
+current_user_installs_2015 = []
+current_user_installs_2015_2 = []
+total_user_installs_2015_complete = []
+total_user_installs_2015_complete_2 = []
+current_user_installs_2016 = []
+current_user_installs_2016_2 = []
+total_user_installs_2016_complete = []
+total_user_installs_2016_complete_2 = []
+daily_installs_2015_complete = []
+daily_installs_2015_complete_2 = []
+daily_uninstalls_2015_complete = []
+daily_uninstalls_2015_complete_2 = []
+daily_installs_2016_complete = []
+daily_installs_2016_complete_2 = []
+daily_uninstalls_2016_complete = []
+daily_uninstalls_2016_complete_2 = []
 
 
 #Einlesen der CSV-Dateien im Ordner Google Play 2015
@@ -180,7 +204,7 @@ del device_crashes_2015[0:5]
 del version_crashes_2015[0:5]
 del version_crashes_2015[-1]
 del country_ratings_2015[0:5]
-del country_installs_complete_2015[0:5]
+del country_installs_complete_2015[0:6]
 del country_installs_complete_2016[0:1]
 
 
@@ -225,9 +249,17 @@ for eintrag in country_ratings_2015:
 	
 for eintrag in country_installs_complete_2015:
 	daily_installs_2015.append(eintrag[8])
+	current_user_installs_2015.append(eintrag[6])
+	total_user_installs_2015_complete.append(eintrag[7])
+	daily_installs_2015_complete.append(eintrag[8])
+	daily_uninstalls_2015_complete.append(eintrag[9])
 	
 for eintrag in country_installs_complete_2016:
 	daily_installs_2016.append(eintrag[9])
+	current_user_installs_2016.append(eintrag[7])
+	total_user_installs_2016_complete.append(eintrag[8])
+	daily_installs_2016_complete.append(eintrag[9])
+	daily_uninstalls_2016_complete.append(eintrag[10])
 
 	
 #String in Integer umwandeln
@@ -248,6 +280,7 @@ for string in total_user_installs_2016_languages:
 	total_user_installs_2016_languages_flop_2.append(int(string))
 	
 for string in crashes_2015:
+	crashes_2015_2.append(int(string))
 	crashes_2015_top_2.append(int(string))
 	crashes_2015_flop_2.append(int(string))
 	
@@ -265,6 +298,32 @@ for string in daily_installs_2015:
 	
 for string in daily_installs_2016:
 	daily_installs_2016_2.append(int(string))
+	
+for string in current_user_installs_2015:
+	current_user_installs_2015_2.append(int(string))
+	
+for string in total_user_installs_2015_complete:
+	total_user_installs_2015_complete_2.append(int(string))
+	
+for string in current_user_installs_2016:
+	current_user_installs_2016_2.append(int(string))
+	
+for string in total_user_installs_2016_complete:
+	total_user_installs_2016_complete_2.append(int(string))
+	
+for string in daily_installs_2015_complete:
+	daily_installs_2015_complete_2.append(int(string))
+
+for string in daily_uninstalls_2015_complete:
+	daily_uninstalls_2015_complete_2.append(int(string))
+	
+for string in daily_installs_2016_complete:
+	daily_installs_2016_complete_2.append(int(string))
+
+for string in daily_uninstalls_2016_complete:
+	daily_uninstalls_2016_complete_2.append(int(string))
+
+
 
 
 #Berechnungen
@@ -288,7 +347,33 @@ summe_installs_2015 = summe(daily_installs_2015_2)
 
 summe_installs_2016 = summe(daily_installs_2016_2)
 
-print (summe_installs_2015, summe_installs_2016)
+summe_crashes_2015 = summe(crashes_2015_2)
+
+summe_current_user_installs_2015 = summe(current_user_installs_2015_2)
+summe_total_user_installs_2015 = summe(total_user_installs_2015_complete_2)
+behalten_quote_2015 = differenz_in_prozent(summe_current_user_installs_2015, summe_total_user_installs_2015)
+
+summe_current_user_installs_2016 = summe(current_user_installs_2016_2)
+summe_total_user_installs_2016 = summe(total_user_installs_2016_complete_2)
+behalten_quote_2016 = differenz_in_prozent(summe_current_user_installs_2016, summe_total_user_installs_2016)
+
+summe_current_user_installs_gesamt = summe_current_user_installs_2015+summe_current_user_installs_2016
+summe_total_user_installs_gesamt = summe_total_user_installs_2015+summe_total_user_installs_2016
+behalten_quote_gesamt = differenz_in_prozent(summe_current_user_installs_gesamt, summe_total_user_installs_gesamt)
+
+deinstallationsquote_2015 = 100 - behalten_quote_2015
+deinstallationsquote_2016 = 100 - behalten_quote_2016
+deinstallationsquote_gesamt = 100 - behalten_quote_gesamt
+
+summe_daily_installs_2015 = summe(daily_installs_2015_complete_2)
+summe_daily_uninstalls_2015 = summe(daily_uninstalls_2015_complete_2)
+summe_daily_installs_2016 = summe(daily_installs_2016_complete_2)
+summe_daily_uninstalls_2016 = summe(daily_uninstalls_2016_complete_2)
+
+differenz_installs_uninstalls_2015 = summe_daily_installs_2015 - summe_daily_uninstalls_2015
+differenz_installs_uninstalls_2016 = summe_daily_installs_2016 - summe_daily_uninstalls_2016
+
+print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_uninstalls_2015, differenz_installs_uninstalls_2016)
 		
 
 #Diagramme
@@ -300,3 +385,4 @@ print (summe_installs_2015, summe_installs_2016)
 #TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
 #TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
 #TODO: horizontales Balkendiagramm (pygal), mit Daten aus summe_installs_2015 und summe_installs_2016
+#TODO: Kreisdiagramm mit Deinstallationsquoten für 2015, 2016 und gesamt
