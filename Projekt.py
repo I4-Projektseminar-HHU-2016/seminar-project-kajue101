@@ -35,6 +35,18 @@ def flop40(liste1, liste2): #Liste1 und Liste2 werden eingelesen
 		liste1[liste1.index(min(liste1))] = 10000000 #der Maximalwert von Liste 1 wird auf 10000000 (beliebiger hoher Wert) gesetzt, damit im nächsten Durchlauf der nächstkleinste Wert betrachtet werden kann
 		i = i+1
 	return flop40liste
+	
+def aufsteigend(liste1, liste2): #Liste1 und Liste2 werden eingelesen
+	aufsteigendeliste = []
+	i = 0
+	k = len(liste1)
+	while i < k:  #weil nur die letzten 20 betrachtet werden
+		aufsteigendeliste.append(min(liste1)) #die neue Liste bekommt den kleinsten Wert von Liste 1 zugeordnet
+		aufsteigendeliste.append(liste2[liste1.index(min(liste1))]) #die neue Liste bekommt den Eintrag von Liste 2 zugeordnet, der den selben Index besitzt wie das Minimum von Liste 1
+		del(liste2[liste1.index(min(liste1))])
+		del(liste1[liste1.index(min(liste1))])
+		i = i+1
+	return aufsteigendeliste
 
 	
 #Listen erstellen 
@@ -77,6 +89,16 @@ total_user_installs_2016_languages_top = []
 total_user_installs_2016_languages_flop = []
 total_user_installs_2016_languages_top_2 = []
 total_user_installs_2016_languages_flop_2 = []
+crashes_2015 = []
+crashes_2015_top = []
+crashes_2015_flop = []
+crashes_2015_top_2 = []
+crashes_2015_flop_2 = []
+devices = []
+crashes_2015_version = []
+crashes_2015_version_2 = []
+version = []
+version_2 = []
 
 
 #Einlesen der CSV-Dateien im Ordner Google Play 2015
@@ -135,6 +157,9 @@ del country_installs_2015[0:5]
 del country_installs_2016[0] 
 del language_installs_2015[0:5]
 del language_installs_2016[0:3]
+del device_crashes_2015[0:5]
+del version_crashes_2015[0:5]
+del version_crashes_2015[-1]
 
 
 #Listen mit einzelnen Spalten befüllen
@@ -161,6 +186,16 @@ for eintrag in language_installs_2016:
 	total_user_installs_2016_languages.append(eintrag[8])
 	total_user_installs_2016_languages_top.append(eintrag[8])
 	total_user_installs_2016_languages_flop.append(eintrag[8])
+	
+for eintrag in device_crashes_2015:
+	devices.append(eintrag[1])
+	crashes_2015.append(eintrag[2])
+	crashes_2015_top.append(eintrag[2])
+	crashes_2015_flop.append(eintrag[2])
+	
+for eintrag in version_crashes_2015:
+	version.append(eintrag[1])
+	crashes_2015_version.append(eintrag[2])
 
 	
 #String in Integer umwandeln
@@ -179,6 +214,16 @@ for string in total_user_installs_2015_languages:
 for string in total_user_installs_2016_languages:
 	total_user_installs_2016_languages_top_2.append(int(string))
 	total_user_installs_2016_languages_flop_2.append(int(string))
+	
+for string in crashes_2015:
+	crashes_2015_top_2.append(int(string))
+	crashes_2015_flop_2.append(int(string))
+	
+for string in crashes_2015_version:
+	crashes_2015_version_2.append(int(string))
+	
+for string in version:
+	version_2.append(int(string))
 
 
 #Berechnungen
@@ -193,10 +238,17 @@ flop40installs_language_2015 = flop40(total_user_installs_2015_languages_flop_2,
 top20installs_language_2016 = top20(total_user_installs_2016_languages_top_2, languages_2016)
 flop40installs_language_2016 = flop40(total_user_installs_2016_languages_flop_2, languages_2016)
 
-print (language_installs_2016[0])
+top20crashes_2015 = top20(crashes_2015_top_2, devices)
+flop40crashes_2015 = flop40(crashes_2015_flop_2, devices)
+
+versionen_crashes_aufsteigend = aufsteigend(version_2, crashes_2015_version_2)
+
+print (versionen_crashes_aufsteigend)
 		
 
 #Diagramme
 
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
 #TODO: Histogramm aus language_installs_2015 und language_installs_2016
+#TODO: Histogramm aus device_crashes_2015
+#TODO: 
