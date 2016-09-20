@@ -61,6 +61,24 @@ def differenz_in_prozent(wert1,wert2):
 	diff = diff*100
 	return diff
 
+def splitlist1(liste):
+	newlist1=[]
+	i = 0
+	k = len(liste)
+	while i < k:
+		newlist1.append(liste[i])
+		i+=2
+	return newlist1
+	
+def splitlist2(liste):
+	newlist2=[]
+	i = 1
+	k = len(liste)
+	while i < k:
+		newlist2.append(liste[i])
+		i+=2
+	return newlist2
+	
 	
 #Listen erstellen 
 
@@ -373,6 +391,9 @@ summe_daily_uninstalls_2016 = summe(daily_uninstalls_2016_complete_2)
 differenz_installs_uninstalls_2015 = summe_daily_installs_2015 - summe_daily_uninstalls_2015
 differenz_installs_uninstalls_2016 = summe_daily_installs_2016 - summe_daily_uninstalls_2016
 
+version_list = splitlist1(versionen_crashes_aufsteigend)
+crashes_list = splitlist2(versionen_crashes_aufsteigend)
+
 print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_uninstalls_2015, differenz_installs_uninstalls_2016)
 		
 
@@ -380,25 +401,61 @@ print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_
 
 import pygal
 from IPython.display import SVG
+from pygal.style import NeonStyle
 
-chart = pygal.HorizontalBar()
+#Horizontales Histogramm mit Vergleich zwischen Installationszahlen 2015 und 2016
+chart = pygal.HorizontalBar(style=NeonStyle,legend_box_size=20)
 chart.title = 'Installationen 2015 und 2016'
 chart.add('2015', summe_installs_2015)
 chart.add('2016', summe_installs_2016)
-chart.render_to_file('charts/installs.svg')
+chart.render_to_file('charts/installs_compared_2015_2016.svg')
 
-pie_chart = pygal.Pie()
+#Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2015
+pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
 pie_chart.title = 'Deinstallationsquote 2015'
-pie_chart.add('Deinstalliert', deinstallationsquote_2015)
-pie_chart.add('Behalten', behalten_quote_2015)
-pie_chart.render_to_file('charts/uninstalls.svg')
+pie_chart.add('Deinstalliert in %', round(deinstallationsquote_2015,1))
+pie_chart.add('Behalten in %', round(behalten_quote_2015,1))
+pie_chart.render_to_file('charts/uninstalls_2015.svg')
+
+#Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2016
+pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart.title = 'Deinstallationsquote 2016'
+pie_chart.add('Deinstalliert in %', round(deinstallationsquote_2016,1))
+pie_chart.add('Behalten in %', round(behalten_quote_2016,1))
+pie_chart.render_to_file('charts/uninstalls_2016.svg')
+
+#Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2015 und 2016 zusammen
+pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart.title = 'Deinstallationsquote 2015 und 2016'
+pie_chart.add('Deinstalliert in %', round(deinstallationsquote_gesamt,1))
+pie_chart.add('Behalten in %', round(behalten_quote_gesamt,1))
+pie_chart.render_to_file('charts/uninstalls_2015_2016.svg')
+
+#Kreisdiagramm als Vergleich zwischen täglichen Installationen und Deinstallationen 2015
+pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart.title = 'Vergleich zwischen täglichen Installationen und Deinstallationen 2015'
+pie_chart.add('Tägliche Installationen', summe_daily_installs_2015)
+pie_chart.add('Tägliche Deinstallationen', summe_daily_uninstalls_2015)
+pie_chart.render_to_file('charts/installs_uninstalls_daily_2015.svg')
+
+#Kreisdiagramm als Vergleich zwischen täglichen Installationen und Deinstallationen 2016
+pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart.title = 'Vergleich zwischen täglichen Installationen und Deinstallationen 2016'
+pie_chart.add('Tägliche Installationen', summe_daily_installs_2016)
+pie_chart.add('Tägliche Deinstallationen', summe_daily_uninstalls_2016)
+pie_chart.render_to_file('charts/installs_uninstalls_daily_2016.svg')
+
+#Graph soll Zusammenhang zwischen App-Versionen und Abstürzen zeigen
+line_chart = pygal.Line(fill=True,style=NeonStyle,legend_box_size=20)
+line_chart.title = 'Tägliche Abstürze pro App-Version'
+line_chart.x_labels = version_list
+line_chart.add('Abstürze',crashes_list)
+line_chart.render_to_file('charts/version_crashes.svg')
+
+
 
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
 #TODO: Histogramm aus language_installs_2015 und language_installs_2016
 #TODO: Histogramm aus device_crashes_2015
-#TODO: Histogramm mit Verlaufskurve (seaborn) erstellen, das zeigt, wie die Zahl der Abstürze sich mit den App-Versionen verändert hat
 #TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
 #TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
-#TODO: horizontales Balkendiagramm (pygal), mit Daten aus summe_installs_2015 und summe_installs_2016
-#TODO: Kreisdiagramm mit Deinstallationsquoten für 2015, 2016 und gesamt
-#TODO: Kreisdiagramm mit summe_daily_installs_2015, summe_daily_uninstalls_2015, summe_daily_installs_2016, summe_daily_uninstalls_2016
