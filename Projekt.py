@@ -394,8 +394,20 @@ differenz_installs_uninstalls_2016 = summe_daily_installs_2016 - summe_daily_uni
 version_list = splitlist1(versionen_crashes_aufsteigend)
 crashes_list = splitlist2(versionen_crashes_aufsteigend)
 
-print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_uninstalls_2015, differenz_installs_uninstalls_2016)
-		
+crashes_list_2 = splitlist1(top20crashes_2015)
+devices_list = splitlist2(top20crashes_2015)
+crashes_list_flop = splitlist1(flop40crashes_2015)
+devices_list_flop = splitlist2(flop40crashes_2015)	
+language_list_1 = splitlist2(top20installs_language_2015)
+installs_list_1 = splitlist1(top20installs_language_2015)
+language_list_2 = splitlist2(top20installs_language_2016)
+installs_list_2 = splitlist1(top20installs_language_2016)
+language_list_3 = splitlist2(flop40installs_language_2015)
+installs_list_3 = splitlist1(flop40installs_language_2015)
+language_list_4 = splitlist2(flop40installs_language_2016)
+installs_list_4 = splitlist1(flop40installs_language_2016)
+
+
 
 #Diagramme
 
@@ -452,10 +464,50 @@ line_chart.x_labels = version_list
 line_chart.add('Abstürze',crashes_list)
 line_chart.render_to_file('charts/version_crashes.svg')
 
+#Histogramm aus den 20 Geräten, die die meisten Abstürze verzeichnen
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = '20 Geräte mit den meisten täglichen Abstürzen'
+line_chart.x_labels = devices_list
+line_chart.add('Abstürze', crashes_list_2)
+line_chart.render_to_file('charts/top20_device_crashes.svg')
+
+#Histogramm aus den 40 Geräten, die die wenigsten Abstürze verzeichnen
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = '40 Geräte mit den wenigsten täglichen Abstürzen'
+line_chart.x_labels = devices_list_flop
+line_chart.add('Abstürze', crashes_list_flop)
+line_chart.render_to_file('charts/flop40_device_crashes.svg')
+
+#Histogramm mit den 20 Sprachen, in denen die App 2015 am häufigsten installiert wurde
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2015'
+line_chart.x_labels = language_list_1
+line_chart.add('Installationen', installs_list_1)
+line_chart.render_to_file('charts/top20_language_installs_2015.svg')
+
+#Histogramm mit den 20 Sprachen, in denen die App 2016 am häufigsten installiert wurde
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2016'
+line_chart.x_labels = language_list_2
+line_chart.add('Installationen', installs_list_2)
+line_chart.render_to_file('charts/top20_language_installs_2016.svg')
+
+#Histogramm mit den 40 Sprachen, in denen die App 2015 am seltensten installiert wurde
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = 'Die 40 am seltensten installierten Sprachen 2015'
+line_chart.x_labels = language_list_3
+line_chart.add('Installationen', installs_list_3)
+line_chart.render_to_file('charts/flop40_language_installs_2015.svg')
+
+#Histogramm mit den 40 Sprachen, in denen die App 2016 am seltensten installiert wurde
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart.title = 'Die 40 am seltensten installierten Sprachen 2016'
+line_chart.x_labels = language_list_4
+line_chart.add('Installationen', installs_list_4)
+line_chart.render_to_file('charts/flop40_language_installs_2016.svg')
+
 
 
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
-#TODO: Histogramm aus language_installs_2015 und language_installs_2016
-#TODO: Histogramm aus device_crashes_2015
 #TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
 #TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
