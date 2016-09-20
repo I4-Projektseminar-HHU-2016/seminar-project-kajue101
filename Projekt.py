@@ -378,6 +378,21 @@ print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_
 
 #Diagramme
 
+import pygal
+from IPython.display import SVG
+
+chart = pygal.HorizontalBar()
+chart.title = 'Installationen 2015 und 2016'
+chart.add('2015', summe_installs_2015)
+chart.add('2016', summe_installs_2016)
+chart.render_to_file('charts/installs.svg')
+
+pie_chart = pygal.Pie()
+pie_chart.title = 'Deinstallationsquote 2015'
+pie_chart.add('Deinstalliert', deinstallationsquote_2015)
+pie_chart.add('Behalten', behalten_quote_2015)
+pie_chart.render_to_file('charts/uninstalls.svg')
+
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
 #TODO: Histogramm aus language_installs_2015 und language_installs_2016
 #TODO: Histogramm aus device_crashes_2015
@@ -386,3 +401,4 @@ print (summe_daily_installs_2015,summe_daily_uninstalls_2015,differenz_installs_
 #TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
 #TODO: horizontales Balkendiagramm (pygal), mit Daten aus summe_installs_2015 und summe_installs_2016
 #TODO: Kreisdiagramm mit Deinstallationsquoten für 2015, 2016 und gesamt
+#TODO: Kreisdiagramm mit summe_daily_installs_2015, summe_daily_uninstalls_2015, summe_daily_installs_2016, summe_daily_uninstalls_2016
