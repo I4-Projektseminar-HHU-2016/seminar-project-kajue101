@@ -407,6 +407,16 @@ installs_list_3 = splitlist1(flop40installs_language_2015)
 language_list_4 = splitlist2(flop40installs_language_2016)
 installs_list_4 = splitlist1(flop40installs_language_2016)
 
+laenderabkuerzungen_2015_klein = []
+laenderabkuerzungen_2016_klein = []
+
+for eintrag in laenderabkuerzungen_2015:
+	laenderabkuerzungen_2015_klein.append(eintrag.lower())
+for eintrag in laenderabkuerzungen_2016:
+	laenderabkuerzungen_2016_klein.append(eintrag.lower())
+
+country_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_klein, total_user_installs_2015_2))
+country_dictionary_2016 = dict(zip(laenderabkuerzungen_2016_klein, total_user_installs_2016_2))
 
 
 #Diagramme
@@ -506,6 +516,17 @@ line_chart.x_labels = language_list_4
 line_chart.add('Installationen', installs_list_4)
 line_chart.render_to_file('charts/flop40_language_installs_2016.svg')
 
+#Weltkarte der Installationen weltweit 2015
+worldmap_chart = pygal.maps.world.World(style=NeonStyle)
+worldmap_chart.title = 'Installationen 2015'
+worldmap_chart.add('Installationen', country_dictionary_2015)
+worldmap_chart.render_to_file('charts/world_map_installs_2015.svg')
+
+#Weltkarte der Installationen weltweit 2016
+worldmap_chart = pygal.maps.world.World(style=NeonStyle)
+worldmap_chart.title = 'Installationen 2016'
+worldmap_chart.add('Installationen', country_dictionary_2016)
+worldmap_chart.render_to_file('charts/world_map_installs_2016.svg')
 
 
 #TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
