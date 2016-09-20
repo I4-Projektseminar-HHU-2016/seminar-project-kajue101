@@ -424,12 +424,14 @@ country_dictionary_2016 = dict(zip(laenderabkuerzungen_2016_klein, total_user_in
 import pygal
 from IPython.display import SVG
 from pygal.style import NeonStyle
+from pygal.style import LightenStyle
+from pygal.style import Style
 
 #Horizontales Histogramm mit Vergleich zwischen Installationszahlen 2015 und 2016
 chart = pygal.HorizontalBar(style=NeonStyle,legend_box_size=20)
 chart.title = 'Installationen 2015 und 2016'
-chart.add('2015', summe_installs_2015)
-chart.add('2016', summe_installs_2016)
+chart.add('2015', summe_installs_2015, rounded_bars=5)
+chart.add('2016', summe_installs_2016, rounded_bars=5)
 chart.render_to_file('charts/installs_compared_2015_2016.svg')
 
 #Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2015
@@ -478,57 +480,69 @@ line_chart.render_to_file('charts/version_crashes.svg')
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = '20 Geräte mit den meisten täglichen Abstürzen'
 line_chart.x_labels = devices_list
-line_chart.add('Abstürze', crashes_list_2)
+line_chart.add('Abstürze', crashes_list_2, rounded_bars=5)
 line_chart.render_to_file('charts/top20_device_crashes.svg')
 
 #Histogramm aus den 40 Geräten, die die wenigsten Abstürze verzeichnen
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = '40 Geräte mit den wenigsten täglichen Abstürzen'
 line_chart.x_labels = devices_list_flop
-line_chart.add('Abstürze', crashes_list_flop)
+line_chart.add('Abstürze', crashes_list_flop, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_device_crashes.svg')
 
 #Histogramm mit den 20 Sprachen, in denen die App 2015 am häufigsten installiert wurde
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2015'
 line_chart.x_labels = language_list_1
-line_chart.add('Installationen', installs_list_1)
+line_chart.add('Installationen', installs_list_1, rounded_bars=5)
 line_chart.render_to_file('charts/top20_language_installs_2015.svg')
 
 #Histogramm mit den 20 Sprachen, in denen die App 2016 am häufigsten installiert wurde
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2016'
 line_chart.x_labels = language_list_2
-line_chart.add('Installationen', installs_list_2)
+line_chart.add('Installationen', installs_list_2, rounded_bars=5)
 line_chart.render_to_file('charts/top20_language_installs_2016.svg')
 
 #Histogramm mit den 40 Sprachen, in denen die App 2015 am seltensten installiert wurde
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = 'Die 40 am seltensten installierten Sprachen 2015'
 line_chart.x_labels = language_list_3
-line_chart.add('Installationen', installs_list_3)
+line_chart.add('Installationen', installs_list_3, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_language_installs_2015.svg')
 
 #Histogramm mit den 40 Sprachen, in denen die App 2016 am seltensten installiert wurde
 line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
 line_chart.title = 'Die 40 am seltensten installierten Sprachen 2016'
 line_chart.x_labels = language_list_4
-line_chart.add('Installationen', installs_list_4)
+line_chart.add('Installationen', installs_list_4, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_language_installs_2016.svg')
 
+#Style für die Weltkarten
+from pygal.style import Style
+world_style = Style(
+  background='transparent',
+  plot_background='#E0F2F7',
+  foreground='black',
+  foreground_strong='black',
+  foreground_subtle='#0B6121',
+  opacity='.6',
+  opacity_hover='.9',
+  transition=None,
+  colors=('#088A08', '#04B404', '#01DF01', '#00FF00'))
+
 #Weltkarte der Installationen weltweit 2015
-worldmap_chart = pygal.maps.world.World(style=NeonStyle)
+worldmap_chart = pygal.maps.world.World(style=world_style)
 worldmap_chart.title = 'Installationen 2015'
 worldmap_chart.add('Installationen', country_dictionary_2015)
 worldmap_chart.render_to_file('charts/world_map_installs_2015.svg')
 
 #Weltkarte der Installationen weltweit 2016
-worldmap_chart = pygal.maps.world.World(style=NeonStyle)
+worldmap_chart = pygal.maps.world.World(style=world_style)
 worldmap_chart.title = 'Installationen 2016'
 worldmap_chart.add('Installationen', country_dictionary_2016)
 worldmap_chart.render_to_file('charts/world_map_installs_2016.svg')
 
 
-#TODO: D3 Diagramm mit den Informationen aus country_installs_2015 und country_installs_2016
 #TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
 #TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
