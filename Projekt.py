@@ -79,6 +79,8 @@ def splitlist2(liste):
 		i+=2
 	return newlist2
 	
+
+	
 	
 #Listen erstellen 
 
@@ -308,8 +310,8 @@ for string in crashes_2015_version:
 for string in version:
 	version_2.append(int(string))
 	
-#for string in ratings_2015:
-#	ratings_2015_2.append(float(string))
+for string in ratings_2015:
+	ratings_2015_2.append(float(string))
 
 for string in daily_installs_2015:
 	daily_installs_2015_2.append(int(string))
@@ -409,15 +411,20 @@ installs_list_4 = splitlist1(flop40installs_language_2016)
 
 laenderabkuerzungen_2015_klein = []
 laenderabkuerzungen_2016_klein = []
+laenderabkuerzungen_2015_ratings_klein = []
 
 for eintrag in laenderabkuerzungen_2015:
 	laenderabkuerzungen_2015_klein.append(eintrag.lower())
 for eintrag in laenderabkuerzungen_2016:
 	laenderabkuerzungen_2016_klein.append(eintrag.lower())
+for eintrag in laenderabkuerzungen_2015_ratings:
+	laenderabkuerzungen_2015_ratings_klein.append(eintrag.lower())
+
 
 country_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_klein, total_user_installs_2015_2))
 country_dictionary_2016 = dict(zip(laenderabkuerzungen_2016_klein, total_user_installs_2016_2))
-
+ratings_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_ratings_klein, ratings_2015_2))
+print (ratings_dictionary_2015)
 
 #Diagramme
 
@@ -526,23 +533,26 @@ world_style = Style(
   foreground='black',
   foreground_strong='black',
   foreground_subtle='#0B6121',
+  font_family='arial',
   opacity='.6',
   opacity_hover='.9',
   transition=None,
-  colors=('#088A08', '#04B404', '#01DF01', '#00FF00'))
+  colors=('#04B404', 'green', 'green', 'green'))
 
 #Weltkarte der Installationen weltweit 2015
 worldmap_chart = pygal.maps.world.World(style=world_style)
-worldmap_chart.title = 'Installationen 2015'
+worldmap_chart.title = 'Weltweite Installationen 2015'
 worldmap_chart.add('Installationen', country_dictionary_2015)
 worldmap_chart.render_to_file('charts/world_map_installs_2015.svg')
 
 #Weltkarte der Installationen weltweit 2016
 worldmap_chart = pygal.maps.world.World(style=world_style)
-worldmap_chart.title = 'Installationen 2016'
+worldmap_chart.title = 'Weltweite Installationen 2016'
 worldmap_chart.add('Installationen', country_dictionary_2016)
 worldmap_chart.render_to_file('charts/world_map_installs_2016.svg')
 
-
-#TODO: D3 Diagramm mit Informationen aus ratings_2015_2 und laenderabkuerzungen_2015_ratings
-#TODO: Datei country_ratings nochmal neu speichern, Bewertungen ergeben keinen Sinn
+#Weltkarte der App_Bewertungen
+worldmap_chart = pygal.maps.world.World(style=world_style)
+worldmap_chart.title = 'Weltweite Bewertungen 2015'
+worldmap_chart.add('Bewertungen', ratings_dictionary_2015)
+worldmap_chart.render_to_file('charts/world_map_ratings_2015.svg')
