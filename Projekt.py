@@ -113,6 +113,8 @@ total_user_installs_2015_top = []
 total_user_installs_2015_top_2 = []
 total_user_installs_2015_flop = []
 total_user_installs_2015_flop_2 = []
+total_user_installs_2015_3 = []
+total_user_installs_2015_3_2 = []
 laenderabkuerzungen_2015 = []
 total_user_installs_2015_2 = []
 total_user_installs_2016 = []
@@ -120,6 +122,8 @@ total_user_installs_2016_top = []
 total_user_installs_2016_top_2 = []
 total_user_installs_2016_flop = []
 total_user_installs_2016_flop_2 = []
+total_user_installs_2016_3_2 = []
+total_user_installs_2016_3 = []
 laenderabkuerzungen_2016 = []
 total_user_installs_2016_2 = []
 languages_2015 = []
@@ -243,12 +247,14 @@ for eintrag in country_installs_2015:
 	laenderabkuerzungen_2015.append(eintrag[1])
 	total_user_installs_2015_top.append(eintrag[7])
 	total_user_installs_2015_flop.append(eintrag[7])
+	total_user_installs_2015_3.append(eintrag[7])
 	
 for eintrag in country_installs_2016:
 	total_user_installs_2016.append(eintrag[8])
 	laenderabkuerzungen_2016.append(eintrag[2])
 	total_user_installs_2016_top.append(eintrag[8])
 	total_user_installs_2016_flop.append(eintrag[8])
+	total_user_installs_2016_3.append(eintrag[8])
 	
 for eintrag in language_installs_2015:
 	languages_2015.append(eintrag[1])
@@ -296,10 +302,13 @@ for string in total_user_installs_2015:
 	total_user_installs_2015_2.append(int(string))
 	total_user_installs_2015_top_2.append(int(string))
 	total_user_installs_2015_flop_2.append(int(string))
+	total_user_installs_2015_3_2.append(int(string))
+	
 for string in total_user_installs_2016:
 	total_user_installs_2016_2.append(int(string))
 	total_user_installs_2016_top_2.append(int(string))
 	total_user_installs_2016_flop_2.append(int(string))
+	total_user_installs_2016_3_2.append(int(string))
 	
 for string in total_user_installs_2015_languages:
 	total_user_installs_2015_languages_top_2.append(int(string))
@@ -445,6 +454,11 @@ country_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_klein, total_user_in
 country_dictionary_2016 = dict(zip(laenderabkuerzungen_2016_klein, total_user_installs_2016_2))
 ratings_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_ratings_klein, ratings_2015_2))
 
+#Top20 Länder & Installationen 2015 und 2016 für die Weltkarten
+top20installs_country_2015_2 = top20(total_user_installs_2015_3_2, laenderabkuerzungen_2015_klein)
+top20installs_country_2016_2 = top20(total_user_installs_2016_3_2, laenderabkuerzungen_2016_klein)
+
+print (top20installs_country_2015_2, top20installs_country_2016_2)
 
 #Diagramme
 
@@ -549,16 +563,13 @@ line_chart.render_to_file('charts/flop40_language_installs_2016.svg')
 from pygal.style import Style
 world_style = Style(
   background='transparent',
-  plot_background='#E0F2F7',
+  plot_background='#f2f9ff',
   foreground='black',
   foreground_strong='black',
   foreground_subtle='#0B6121',
-  legend_font_size=20,
+  legend_font_size=15,
   title_font_size=20,
   legend_box_size=20,
-  opacity='.6',
-  opacity_hover='.9',
-  transition=None,
   colors=('#04B404', 'green', 'green', 'green'))
 
 #Weltkarte der Installationen weltweit 2015
@@ -578,3 +589,60 @@ worldmap_chart = pygal.maps.world.World(style=world_style)
 worldmap_chart.title = 'Weltweite Bewertungen 2015'
 worldmap_chart.add('Bewertungen', ratings_dictionary_2015)
 worldmap_chart.render_to_file('charts/world_map_ratings_2015.svg')
+
+#Style für die Top20 Weltkarten
+world_style2 = Style(
+  background='transparent',
+  plot_background='#f2f9ff',
+  title_font_size=17,)
+
+#Weltkarte der 20 Länder mit den meisten Installationen 2015
+worldmap_chart = pygal.maps.world.World(style=world_style2)
+worldmap_chart.title = 'Die 20 Länder mit den meisten Installationen 2015'
+worldmap_chart.add('United States', {top20installs_country_2015_2[1]:top20installs_country_2015_2[0]})
+worldmap_chart.add('Unknown', {top20installs_country_2015_2[3]:top20installs_country_2015_2[2]})
+worldmap_chart.add('Germany', {top20installs_country_2015_2[5]:top20installs_country_2015_2[4]})
+worldmap_chart.add('Japan', {top20installs_country_2015_2[7]:top20installs_country_2015_2[6]})
+worldmap_chart.add('Russian Federation', {top20installs_country_2015_2[9]:top20installs_country_2015_2[8]})
+worldmap_chart.add('United Kingdom', {top20installs_country_2015_2[11]:top20installs_country_2015_2[10]})
+worldmap_chart.add('Poland', {top20installs_country_2015_2[13]:top20installs_country_2015_2[12]})
+worldmap_chart.add('Brazil', {top20installs_country_2015_2[15]:top20installs_country_2015_2[14]})
+worldmap_chart.add('Taiwan', {top20installs_country_2015_2[17]:top20installs_country_2015_2[16]})
+worldmap_chart.add('Canada', {top20installs_country_2015_2[19]:top20installs_country_2015_2[18]})
+worldmap_chart.add('Korea', {top20installs_country_2015_2[21]:top20installs_country_2015_2[20]})
+worldmap_chart.add('France', {top20installs_country_2015_2[23]:top20installs_country_2015_2[22]})
+worldmap_chart.add('Australia', {top20installs_country_2015_2[25]:top20installs_country_2015_2[24]})
+worldmap_chart.add('Spain', {top20installs_country_2015_2[27]:top20installs_country_2015_2[26]})
+worldmap_chart.add('Italy', {top20installs_country_2015_2[29]:top20installs_country_2015_2[28]})
+worldmap_chart.add('Hungary', {top20installs_country_2015_2[31]:top20installs_country_2015_2[30]})
+worldmap_chart.add('Switzerland', {top20installs_country_2015_2[33]:top20installs_country_2015_2[32]})
+worldmap_chart.add('Ukraine', {top20installs_country_2015_2[35]:top20installs_country_2015_2[34]})
+worldmap_chart.add('India', {top20installs_country_2015_2[37]:top20installs_country_2015_2[36]})
+worldmap_chart.add('Austria', {top20installs_country_2015_2[39]:top20installs_country_2015_2[38]})
+worldmap_chart.render_to_file('charts/world_map_top20_2015.svg')
+
+#Weltkarte der 20 Länder mit den meisten Installationen 2016
+worldmap_chart = pygal.maps.world.World(style=world_style2)
+worldmap_chart.title = 'Die 20 Länder mit den meisten Installationen 2016'
+worldmap_chart.add('United States', {top20installs_country_2016_2[1]:top20installs_country_2016_2[0]})
+worldmap_chart.add('Unknown', {top20installs_country_2016_2[3]:top20installs_country_2016_2[2]})
+worldmap_chart.add('Germany', {top20installs_country_2016_2[5]:top20installs_country_2016_2[4]})
+worldmap_chart.add('Japan', {top20installs_country_2016_2[7]:top20installs_country_2016_2[6]})
+worldmap_chart.add('Brazil', {top20installs_country_2016_2[9]:top20installs_country_2016_2[8]})
+worldmap_chart.add('Russian Federation', {top20installs_country_2016_2[11]:top20installs_country_2016_2[10]})
+worldmap_chart.add('United Kingdom', {top20installs_country_2016_2[13]:top20installs_country_2016_2[12]})
+worldmap_chart.add('Poland', {top20installs_country_2016_2[15]:top20installs_country_2016_2[14]})
+worldmap_chart.add('Taiwan', {top20installs_country_2016_2[17]:top20installs_country_2016_2[16]})
+worldmap_chart.add('France', {top20installs_country_2016_2[19]:top20installs_country_2016_2[18]})
+worldmap_chart.add('Canada', {top20installs_country_2016_2[21]:top20installs_country_2016_2[20]})
+worldmap_chart.add('Spain', {top20installs_country_2016_2[23]:top20installs_country_2016_2[22]})
+worldmap_chart.add('Korea', {top20installs_country_2016_2[25]:top20installs_country_2016_2[24]})
+worldmap_chart.add('Australia', {top20installs_country_2016_2[27]:top20installs_country_2016_2[26]})
+worldmap_chart.add('Italy', {top20installs_country_2016_2[29]:top20installs_country_2016_2[28]})
+worldmap_chart.add('Ukraine', {top20installs_country_2016_2[31]:top20installs_country_2016_2[30]})
+worldmap_chart.add('India', {top20installs_country_2016_2[33]:top20installs_country_2016_2[32]})
+worldmap_chart.add('Hungary', {top20installs_country_2016_2[35]:top20installs_country_2016_2[34]})
+worldmap_chart.add('Viet Nam', {top20installs_country_2016_2[37]:top20installs_country_2016_2[36]})
+worldmap_chart.add('Switzerland', {top20installs_country_2016_2[39]:top20installs_country_2016_2[38]})
+worldmap_chart.render_to_file('charts/world_map_top20_2016.svg')
+
