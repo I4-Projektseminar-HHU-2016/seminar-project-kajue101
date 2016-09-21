@@ -83,8 +83,17 @@ def splitlist2(liste):
 		newlist2.append(liste[i])
 		i+=2
 	return newlist2
-	
 
+#Funktion zur Berechnung des Durchschnitts einer Liste
+def durchschnitt(liste):
+	durchschnitt = 0
+	summe = 0
+	for i in liste:
+		summe += i
+	durchschnitt = summe/len(liste)
+	return durchschnitt
+		
+		
 #Listen erstellen 
 
 #Listen für die gesamte CSV-Datei
@@ -403,6 +412,9 @@ summe_daily_uninstalls_2016 = summe(daily_uninstalls_2016_complete_2)
 #Differenz zwischen Installationen und Deinstallationen (2015 & 2016)
 differenz_installs_uninstalls_2015 = summe_daily_installs_2015 - summe_daily_uninstalls_2015
 differenz_installs_uninstalls_2016 = summe_daily_installs_2016 - summe_daily_uninstalls_2016
+
+#Berechnung der weltweiten Durchschnittsbewertung
+durchschnittsbewertung_2015 = durchschnitt(ratings_2015_2)
 
 #Splitten einiger zusammengesetzer Listen, für die Diagramme
 version_list = splitlist1(versionen_crashes_aufsteigend)
