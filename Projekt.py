@@ -458,7 +458,6 @@ ratings_dictionary_2015 = dict(zip(laenderabkuerzungen_2015_ratings_klein, ratin
 top20installs_country_2015_2 = top20(total_user_installs_2015_3_2, laenderabkuerzungen_2015_klein)
 top20installs_country_2016_2 = top20(total_user_installs_2016_3_2, laenderabkuerzungen_2016_klein)
 
-print (top20installs_country_2015_2, top20installs_country_2016_2)
 
 #Diagramme
 
@@ -467,9 +466,45 @@ from IPython.display import SVG
 from pygal.style import NeonStyle
 from pygal.style import LightenStyle
 from pygal.style import Style
+from pygal import Config
+
+#Style für die Diagramme
+chart_style1 = Style(
+  background='transparent',
+  plot_background='white',
+  label_font_size = 18,
+  x_label_rotation= 30,
+  tooltip_font_size = 20,
+  major_label_font_size = 18,	
+  title_font_size = 18,
+  legend_font_size = 18,
+  opacity='.5',
+  opacity_hover='.7',
+  transition='500ms ease-in',
+  colors=('#de0000', '#0016bb'))
+  
+chart_style2 = Style(
+  background='transparent',
+  plot_background='white',
+  label_font_size = 12,
+  x_label_rotation= 30,
+  tooltip_font_size = 20,
+  major_label_font_size = 16,	
+  title_font_size = 18,
+  legend_font_size = 18,
+  opacity='.5',
+  opacity_hover='.7',
+  transition='500ms ease-in',
+  colors=('#de0000', '#0016bb'))
+  
+config = Config()
+config.rounded_bars=5
+config.legend_box_size=20
+config.x_label_rotation=90
+config.fill=True
 
 #Horizontales Histogramm mit Vergleich zwischen Installationszahlen 2015 und 2016
-chart = pygal.HorizontalBar(style=NeonStyle,legend_box_size=20)
+chart = pygal.HorizontalBar(style=chart_style1,legend_box_size=20)
 chart.title = 'Installationen 2015 und 2016'
 chart.add('2015', summe_installs_2015, rounded_bars=5)
 chart.add('2016', summe_installs_2016, rounded_bars=5)
@@ -511,21 +546,21 @@ pie_chart.add('Tägliche Deinstallationen', summe_daily_uninstalls_2016)
 pie_chart.render_to_file('charts/installs_uninstalls_daily_2016.svg')
 
 #Graph soll Zusammenhang zwischen App-Versionen und Abstürzen zeigen
-line_chart = pygal.Line(fill=True,style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Line(config, style=chart_style2)
 line_chart.title = 'Tägliche Abstürze pro App-Version'
 line_chart.x_labels = version_list
 line_chart.add('Abstürze',crashes_list)
 line_chart.render_to_file('charts/version_crashes.svg')
 
 #Histogramm aus den 20 Geräten, die die meisten Abstürze verzeichnen
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20, x_label_rotation=45)
 line_chart.title = '20 Geräte mit den meisten täglichen Abstürzen'
 line_chart.x_labels = devices_list
 line_chart.add('Abstürze', crashes_list_2, rounded_bars=5)
 line_chart.render_to_file('charts/top20_device_crashes.svg')
 
 #Histogramm aus den 40 Geräten, die die wenigsten Abstürze verzeichnen
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20, x_label_rotation=45)
 line_chart.title = '40 Geräte mit den wenigsten täglichen Abstürzen'
 line_chart.x_labels = devices_list_flop
 line_chart.add('Abstürze', crashes_list_flop, rounded_bars=5)
