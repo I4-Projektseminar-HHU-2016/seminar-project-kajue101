@@ -463,12 +463,10 @@ top20installs_country_2016_2 = top20(total_user_installs_2016_3_2, laenderabkuer
 
 import pygal
 from IPython.display import SVG
-from pygal.style import NeonStyle
-from pygal.style import LightenStyle
 from pygal.style import Style
 from pygal import Config
 
-#Style für die Diagramme
+#Style für die Diagramme mit großer Schrift
 chart_style1 = Style(
   background='transparent',
   plot_background='white',
@@ -482,7 +480,8 @@ chart_style1 = Style(
   opacity_hover='.7',
   transition='500ms ease-in',
   colors=('#de0000', '#0016bb'))
-  
+
+#Style für die Diagramme mit kleiner Schrift
 chart_style2 = Style(
   background='transparent',
   plot_background='white',
@@ -497,6 +496,26 @@ chart_style2 = Style(
   transition='500ms ease-in',
   colors=('#de0000', '#0016bb'))
   
+#Style für die Weltkarten
+from pygal.style import Style
+world_style = Style(
+  background='transparent',
+  plot_background='#f2f9ff',
+  foreground='black',
+  foreground_strong='black',
+  foreground_subtle='#0B6121',
+  legend_font_size=15,
+  title_font_size=20,
+  legend_box_size=20,
+  colors=('#04B404', 'green', 'green', 'green'))
+  
+#Style für die Top20 Weltkarten
+world_style2 = Style(
+  background='transparent',
+  plot_background='#f2f9ff',
+  title_font_size=17,)
+
+#Diagramm-Einstellungen
 config = Config()
 config.rounded_bars=5
 config.legend_box_size=20
@@ -511,35 +530,35 @@ chart.add('2016', summe_installs_2016, rounded_bars=5)
 chart.render_to_file('charts/installs_compared_2015_2016.svg')
 
 #Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2015
-pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart = pygal.Pie(style=chart_style1,legend_box_size=20)
 pie_chart.title = 'Deinstallationsquote 2015'
 pie_chart.add('Deinstalliert in %', round(deinstallationsquote_2015,1))
 pie_chart.add('Behalten in %', round(behalten_quote_2015,1))
 pie_chart.render_to_file('charts/uninstalls_2015.svg')
 
 #Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2016
-pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart = pygal.Pie(style=chart_style1,legend_box_size=20)
 pie_chart.title = 'Deinstallationsquote 2016'
 pie_chart.add('Deinstalliert in %', round(deinstallationsquote_2016,1))
 pie_chart.add('Behalten in %', round(behalten_quote_2016,1))
 pie_chart.render_to_file('charts/uninstalls_2016.svg')
 
 #Kreisdiagramm mit Deinstallations- und "Behalten"-Quote von 2015 und 2016 zusammen
-pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart = pygal.Pie(style=chart_style1,legend_box_size=20)
 pie_chart.title = 'Deinstallationsquote 2015 und 2016'
 pie_chart.add('Deinstalliert in %', round(deinstallationsquote_gesamt,1))
 pie_chart.add('Behalten in %', round(behalten_quote_gesamt,1))
 pie_chart.render_to_file('charts/uninstalls_2015_2016.svg')
 
 #Kreisdiagramm als Vergleich zwischen täglichen Installationen und Deinstallationen 2015
-pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart = pygal.Pie(style=chart_style1,legend_box_size=20)
 pie_chart.title = 'Vergleich zwischen täglichen Installationen und Deinstallationen 2015'
 pie_chart.add('Tägliche Installationen', summe_daily_installs_2015)
 pie_chart.add('Tägliche Deinstallationen', summe_daily_uninstalls_2015)
 pie_chart.render_to_file('charts/installs_uninstalls_daily_2015.svg')
 
 #Kreisdiagramm als Vergleich zwischen täglichen Installationen und Deinstallationen 2016
-pie_chart = pygal.Pie(style=NeonStyle,legend_box_size=20)
+pie_chart = pygal.Pie(style=chart_style1,legend_box_size=20)
 pie_chart.title = 'Vergleich zwischen täglichen Installationen und Deinstallationen 2016'
 pie_chart.add('Tägliche Installationen', summe_daily_installs_2016)
 pie_chart.add('Tägliche Deinstallationen', summe_daily_uninstalls_2016)
@@ -553,59 +572,46 @@ line_chart.add('Abstürze',crashes_list)
 line_chart.render_to_file('charts/version_crashes.svg')
 
 #Histogramm aus den 20 Geräten, die die meisten Abstürze verzeichnen
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20, x_label_rotation=45)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = '20 Geräte mit den meisten täglichen Abstürzen'
 line_chart.x_labels = devices_list
 line_chart.add('Abstürze', crashes_list_2, rounded_bars=5)
 line_chart.render_to_file('charts/top20_device_crashes.svg')
 
 #Histogramm aus den 40 Geräten, die die wenigsten Abstürze verzeichnen
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20, x_label_rotation=45)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = '40 Geräte mit den wenigsten täglichen Abstürzen'
 line_chart.x_labels = devices_list_flop
 line_chart.add('Abstürze', crashes_list_flop, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_device_crashes.svg')
 
 #Histogramm mit den 20 Sprachen, in denen die App 2015 am häufigsten installiert wurde
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2015'
 line_chart.x_labels = language_list_1
 line_chart.add('Installationen', installs_list_1, rounded_bars=5)
 line_chart.render_to_file('charts/top20_language_installs_2015.svg')
 
 #Histogramm mit den 20 Sprachen, in denen die App 2016 am häufigsten installiert wurde
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = 'Die 20 am häufigsten installierten Sprachen 2016'
 line_chart.x_labels = language_list_2
 line_chart.add('Installationen', installs_list_2, rounded_bars=5)
 line_chart.render_to_file('charts/top20_language_installs_2016.svg')
 
 #Histogramm mit den 40 Sprachen, in denen die App 2015 am seltensten installiert wurde
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = 'Die 40 am seltensten installierten Sprachen 2015'
 line_chart.x_labels = language_list_3
 line_chart.add('Installationen', installs_list_3, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_language_installs_2015.svg')
 
 #Histogramm mit den 40 Sprachen, in denen die App 2016 am seltensten installiert wurde
-line_chart = pygal.Bar(style=NeonStyle,legend_box_size=20)
+line_chart = pygal.Bar(config, style=chart_style2)
 line_chart.title = 'Die 40 am seltensten installierten Sprachen 2016'
 line_chart.x_labels = language_list_4
 line_chart.add('Installationen', installs_list_4, rounded_bars=5)
 line_chart.render_to_file('charts/flop40_language_installs_2016.svg')
-
-#Style für die Weltkarten
-from pygal.style import Style
-world_style = Style(
-  background='transparent',
-  plot_background='#f2f9ff',
-  foreground='black',
-  foreground_strong='black',
-  foreground_subtle='#0B6121',
-  legend_font_size=15,
-  title_font_size=20,
-  legend_box_size=20,
-  colors=('#04B404', 'green', 'green', 'green'))
 
 #Weltkarte der Installationen weltweit 2015
 worldmap_chart = pygal.maps.world.World(style=world_style)
@@ -624,12 +630,6 @@ worldmap_chart = pygal.maps.world.World(style=world_style)
 worldmap_chart.title = 'Weltweite Bewertungen 2015'
 worldmap_chart.add('Bewertungen', ratings_dictionary_2015)
 worldmap_chart.render_to_file('charts/world_map_ratings_2015.svg')
-
-#Style für die Top20 Weltkarten
-world_style2 = Style(
-  background='transparent',
-  plot_background='#f2f9ff',
-  title_font_size=17,)
 
 #Weltkarte der 20 Länder mit den meisten Installationen 2015
 worldmap_chart = pygal.maps.world.World(style=world_style2)
