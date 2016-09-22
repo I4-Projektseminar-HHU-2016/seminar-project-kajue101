@@ -1,5 +1,6 @@
 body {
 	margin:30px 40px 10px 40px;
+	background-color:#f0efff;
 }
 
 .piechart {
@@ -18,7 +19,7 @@ p {
 	text-align:left;
 }
 
-figcaption {
+.quelle {
 	font-family: "Arial";
 	font-size: 10px;
 	margin-left: 35px;
@@ -29,6 +30,18 @@ figcaption {
 	margin-left: 10px;
 	margin-top: -10px;
 } 
+
+.worldmap {
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+}
+
+.mapcaption {
+	font-family: "Arial";
+	font-size: 12px;
+	text-align: center;
+}
 
 #Footer {
 	font-family: "Arial";
