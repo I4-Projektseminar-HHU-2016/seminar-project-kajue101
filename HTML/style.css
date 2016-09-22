@@ -2,7 +2,7 @@ body {
 	margin:30px 40px 10px 40px;
 }
 
-figure {
+.piechart {
 	margin-left:auto;
 	margin-right:auto;
 	width:60%
@@ -14,10 +14,21 @@ h2,h3 {
 
 p {
 	font-family: "Arial";
-	font-size: 20px;
-	text-align:inherit;
+	font-size: 16px;
+	text-align:left;
 }
 
+figcaption {
+	font-family: "Arial";
+	font-size: 10px;
+	margin-left: 35px;
+}
+
+.logo {
+	float: right;
+	margin-left: 10px;
+	margin-top: -10px;
+} 
 
 #Footer {
 	font-family: "Arial";
