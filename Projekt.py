@@ -3,7 +3,8 @@ import csv
 
 #Funktionen
 
-#Funktion zur Berechnung der Top20
+#Funktion zur Berechnung der Top20 
+#Dieses Prinzip der Top und Flop Berechnung wurde in Zusammenarbeit mit Philipp Nowak erstellt
 def top20(liste1, liste2): #Liste1 und Liste2 werden eingelesen
 	top20liste = []
 	i = 0
@@ -469,7 +470,7 @@ from pygal import Config
 #Style für die Diagramme mit großer Schrift
 chart_style1 = Style(
   background='transparent',
-  plot_background='white',
+  plot_background='#f0efff',
   label_font_size = 18,
   x_label_rotation= 30,
   tooltip_font_size = 20,
@@ -484,7 +485,7 @@ chart_style1 = Style(
 #Style für die Diagramme mit kleiner Schrift
 chart_style2 = Style(
   background='transparent',
-  plot_background='white',
+  plot_background='#f0efff',
   label_font_size = 12,
   x_label_rotation= 30,
   tooltip_font_size = 20,
@@ -500,7 +501,7 @@ chart_style2 = Style(
 from pygal.style import Style
 world_style = Style(
   background='transparent',
-  plot_background='#f2f9ff',
+  plot_background='#f0efff',
   foreground='black',
   foreground_strong='black',
   foreground_subtle='#0B6121',
@@ -512,7 +513,7 @@ world_style = Style(
 #Style für die Top20 Weltkarten
 world_style2 = Style(
   background='transparent',
-  plot_background='#f2f9ff',
+  plot_background='#f0efff',
   title_font_size=17,)
 
 #Diagramm-Einstellungen
