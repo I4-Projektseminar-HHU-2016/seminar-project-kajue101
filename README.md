@@ -53,7 +53,7 @@ pip install pygal_maps_world
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. 
+I don't think versioning is necessary for this kind of project, because this is the first and also the concluded version.
 
 ## Authors
 
@@ -68,6 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * One of the functions in the code was made in cooperation with Philipp Nowak
 * The Google Play statistics of the app can be found [here] (https://datahub.io/organization/ankidroid).
 * This project was inspired by a team project of last years "Projektseminar Informetie"
+* The charts were created with help of the very detailed and clear [pygal documentation] (http://pygal.org/en/stable/documentation/index.html).
 
 
 
