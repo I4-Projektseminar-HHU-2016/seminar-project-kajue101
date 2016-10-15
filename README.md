@@ -19,7 +19,7 @@ I loaded those csv-files into a python program, did some calculations and visual
 - [x] style examples for the different charts
 - [x] different functions to get information out of the csv-files
 - [x] website with the embedded charts, further explanations and the documentation
-- [] D3 visualisation was also planned, but not realized
+- [ ] D3 visualisation was also planned, but not realized
 
 ## Getting Started
 
@@ -34,9 +34,9 @@ To open the file you will need an editor like for example [notepad++] (https://n
 
 There are only a few things, that could be necessary to make the program run on your computer.
 
-- [] Pull the project or download it as a zip-folder
-- [] Install Python 3 on your computer (like already mentioned)
-- [] Enter the following commands into your command prompt:
+- [ ] Pull the project or download it as a zip-folder
+- [ ] Install Python 3 on your computer (like already mentioned)
+- [ ] Enter the following commands into your command prompt:
 
 ```
 pip install ipython
@@ -48,7 +48,7 @@ pip install pygal
 pip install pygal_maps_world
 ```
 
-- [] Run the file "Projekt.py" to create the charts (not necessary, because I already uploaded the charts, but you can do if you want to test the code - the old files in the folder "charts" will be replaced)
+- [ ] Run the file "Projekt.py" to create the charts (not necessary, because I already uploaded the charts, but you can do if you want to test the code - the old files in the folder "charts" will be replaced)
 
 
 ## Versioning
